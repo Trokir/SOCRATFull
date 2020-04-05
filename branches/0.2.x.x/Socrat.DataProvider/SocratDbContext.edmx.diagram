@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3f234211709a4861afe70e35929c4550" Name="Diagram1" ZoomLevel="95">
+        <EntityTypeShape EntityType="Socrat.Db.Models.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="17.75" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.C__RefactorLog" Width="1.5" PointX="17.75" PointY="16.75" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.DateTimeRange" Width="1.5" PointX="18.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.Log" Width="1.5" PointX="20.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.MaterialSpecProperty" Width="1.5" PointX="27.875" PointY="0.875" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.sysdiagram" Width="1.5" PointX="0.75" PointY="20.75" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_MatSpecProperty_Material" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.Account" Width="1.5" PointX="8.25" PointY="22" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.Address" Width="1.5" PointX="3" PointY="30.75" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.AddressContact" Width="1.5" PointX="5.25" PointY="30.875" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.AddressElement" Width="1.5" PointX="3" PointY="44" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.AddressElementType" Width="1.5" PointX="0.75" PointY="44.25" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.AddressItem" Width="1.5" PointX="5.25" PointY="35.125" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.AppParam" Width="1.5" PointX="2.75" PointY="4.75" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.Bank" Width="1.5" PointX="6" PointY="38.375" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.Brand" Width="1.5" PointX="25.25" PointY="32.625" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.ContactType" Width="1.5" PointX="3" PointY="37.875" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.Contract" Width="1.5" PointX="11.25" PointY="19.375" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.ContractAddress" Width="1.5" PointX="8.25" PointY="30.875" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.ContractPrice" Width="1.5" PointX="16.5" PointY="18" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.ContractShippingSquare" Width="1.5" PointX="13.5" PointY="30.875" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.ContractTenderFormula" Width="1.5" PointX="13.5" PointY="23.875" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.ContractType" Width="1.5" PointX="9" PointY="26.75" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.Country" Width="1.5" PointX="0.75" PointY="22.375" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.CoworkerContact" Width="1.5" PointX="8.25" PointY="15.375" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.CoworkerPosition" Width="1.5" PointX="11.25" PointY="33.375" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.Currency" Width="1.5" PointX="6" PointY="9.875" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.Customer" Width="1.5" PointX="3" PointY="19.5" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.CustomerAddress" Width="1.5" PointX="5.25" PointY="25.625" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.CustomerPropType" Width="1.5" PointX="3" PointY="7.625" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.CustomerType" Width="1.5" PointX="0.75" PointY="19.25" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.DepartmentType" Width="1.5" PointX="9" PointY="34.625" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.DivisionContact" Width="1.5" PointX="11.25" PointY="29.125" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.DivisionCustomer" Width="1.5" PointX="8.25" PointY="18.375" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.DivisionSignature" Width="2.625" PointX="6.75" PointY="17.625" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.DocumentSignature" Width="1.5" PointX="14.25" PointY="34" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.DocumentSignatureType" Width="1.5" PointX="3" PointY="35.125" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.DocumentType" Width="1.5" PointX="3" PointY="15.125" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.Formula" Width="1.5" PointX="16.5" PointY="14.625" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.FormulaItem" Width="1.5" PointX="34.25" PointY="24" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.FormulaItemFrameProperty" Width="1.5" PointX="36.5" PointY="27.625" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.FormulaItemGlassProperty" Width="1.5" PointX="36.5" PointY="24.875" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.FormulaItemTriplexProperty" Width="1.5" PointX="36.5" PointY="22.125" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.Gender" Width="1.5" PointX="0.75" PointY="11.75" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.Material" Width="1.5" PointX="23" PointY="32.25" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.MaterialMarkType" Width="1.5" PointX="25.25" PointY="37.125" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.MaterialNom" Width="1.5" PointX="32" PointY="34.75" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.MaterialSizeType" Width="1.5" PointX="34.25" PointY="36" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.MaterialType" Width="1.5" PointX="20.75" PointY="33" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.Measure" Width="1.5" PointX="32" PointY="38.5" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.Module" Width="1.5" PointX="0.75" PointY="1.5" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.OPF" Width="1.5" PointX="0.75" PointY="25.75" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.Order" Width="1.5" PointX="13.5" PointY="17.875" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.OrderRow" Width="1.5" PointX="18.75" PointY="18.125" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.OrderRowSloz" Width="1.5" PointX="21" PointY="19.5" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.PaymentType" Width="1.5" PointX="11.25" PointY="16.625" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.Price" Width="1.5" PointX="14.25" PointY="11.5" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.PriceFarmeType" Width="1.5" PointX="16.5" PointY="10.75" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.PriceFilm" Width="1.5" PointX="16.5" PointY="30.375" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.PriceGlassCut" Width="1.5" PointX="16.5" PointY="7.625" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.PriceMargin" Width="1.5" PointX="16.5" PointY="33.5" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.PriceSloz" Width="1.5" PointX="21" PointY="12.625" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.PriceSpro" Width="1.5" PointX="16.5" PointY="36.625" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.PriceSprosComponent" Width="1.5" PointX="16.5" PointY="4.25" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.PriceSquare" Width="1.5" PointX="14.25" PointY="27.625" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.PriceSquareCustom" Width="1.5" PointX="16.5" PointY="22.375" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.PriceType" Width="1.5" PointX="12" PointY="12.625" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.Processing" Width="1.5" PointX="25.25" PointY="40.625" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.Role" Width="1.5" PointX="3" PointY="47.5" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.RoleTreeItem" Width="1.5" PointX="5.25" PointY="1.125" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.Shape" Width="1.5" PointX="16.5" PointY="26.125" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.ShapePoint" Width="1.5" PointX="18.75" PointY="26.625" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.SlozType" Width="1.5" PointX="18.75" PointY="14.5" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.TradeMark" Width="1.5" PointX="27.5" PointY="32.75" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.TreeItemType" Width="1.5" PointX="0.75" PointY="5.5" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.VendorMaterial" Width="1.5" PointX="25.25" PointY="29.875" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.VendorMaterialNom" Width="1.5" PointX="29.75" PointY="34" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.WorkPosition" Width="1.5" PointX="3" PointY="40.75" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_Account_Bank" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_Account_Currency" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_Account_Customer" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_Order_Account" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_Address_Country" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_AddressContact_Address" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_AddressItem_Address" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_ContractAddress_Address" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_CustomerAddress_Address" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_AddressContact_ContactType" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_AddressContact_WorkPosition" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_AddressElement_AddressElementType" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_AddressItem_AddressElement" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_Brand_Material" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_TradeMark_Brand" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_VendorMaterialNom_Brand" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_CoworkerContact_ContactType" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_DivisionContact_ContactType" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_Contract_ContractType" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_Contract_Customer" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_Contract_PaymentType" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_ContractAddress_Contract" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_ContractPrice_Contract" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_ContractShippingSquare_Contract" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_ContractTenderFormula_Contract" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_PriceSquareCustom_Contract" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_ContractPrice_Price" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_ContractPrice_PriceType" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_Country_Customer" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_CoworkerPosition_WorkPosition" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_CustomerAddress_Customer" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_CustomerType_Customer" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_DivisionCustomer_Customer" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_DivisionSignature_Customer" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_OPF_Customer" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_Order_Custmer" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_DivisionContact_DepartmentType" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_DivisionSignature_DocumentSignatureType" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_DivisionSignature_DocumentType" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_DocumentSignature_DocumentSignatureType" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_DocumentSignature_DocumentType" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_FormulaItem_Formula" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_OrderRow_Formula" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_FormulaItem_FormulaItem" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_FormulaItem_Material" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_FormulaItem_MaterialNom" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_FormulaItemFrameProperties_FormulaItem" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_FormulaItemGlassProperties_FormulaItem" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_FormulaItemTriplexProperties_FormulaItem" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_Material_MaterialType" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_MaterialMarkType_Material" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_Processing_Material" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_TradeMark_Material" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_VendorMaterial_Material" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_VendorMaterialNom_Material" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_MaterialSizeType_MaterialMarkType" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_VendorMaterialNom_MaterialMarkType" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_MaterialNom_MaterialSizeType" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_MaterialNom_VendorMaterialNom" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_MaterialSizeType_MatrialNom" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_MaterialSizeType_Measure" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_Order_PaymentType" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_OrderRow_Order" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_OrderRow_Shape" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_OrderRowSloz_OrderRow" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_OrderRowSloz_SlozType" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_Price_PriceType" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_PriceFarmeType_Price" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_PriceFilm_Price" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_PriceGlassCut_Price" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_PriceMargin_Price" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_PriceSloz_Price" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_PriceSpros_Price" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_PriceSprosComponent_Price" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_PriceSloz_SlozType" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_PriceSquareCustom_PriceSquare" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_RoleTreeItem_ToRole" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_ShapePoint_Shape" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_VendorMaterialNom_TradeMark" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.TreeItem" Width="1.5" PointX="3" PointY="0.75" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_TreeItem_ToModule" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_RoleTreeItem_ToTreeItem" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_TreeItem_ToTreeItemType" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_TreeItem_TreeItem" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_Customer_Currency" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.CustomerProp" Width="1.5" PointX="8.25" PointY="11.5" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_Customer_CustomerProp" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_CustomerPropType_CustometProp" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.User" Width="1.5" PointX="5.25" PointY="47" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_User_ToRole" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.Coworker" Width="1.5" PointX="3" PointY="11" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_Contract_Coworker" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_Coworker_Gender" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_CoworkerContact_Coworker" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_CoworkerPosition_Coworker" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_DivisionSignature_Coworker" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.Vendor" Width="1.5" PointX="20" PointY="29.875" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_Brand_Vendor" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_VendorMaterial_Vendor" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_VendorMaterialNom_Vendor" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.Division" Width="1.5" PointX="0.75" PointY="29.125" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_Contract_Division" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_CoworkerPosition_Division" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_DivisionContact_Division" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_DivisionCustomer_Division" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_DivisionSignature_Division" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_Order_Division" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.OrderStatus" Width="1.5" PointX="11" PointY="7.75" />
+        <EntityTypeShape EntityType="Socrat.Db.Models.OrderStatusHistory" Width="1.875" PointX="18.5" PointY="34.875" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_Order_OrderStatus" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_OrderStatusHistory_Order" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_OrderStatusHistory_OrderStatus" />
+        <AssociationConnector Association="Socrat.Db.Models.FK_OrderStatusHistory_UserId" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

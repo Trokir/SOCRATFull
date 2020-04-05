@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FE5C0691-6941-457E-A6ED-1BD15BC25AEC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Socrat.UI.Core</RootNamespace>
+    <AssemblyName>Socrat.UI.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\OUT\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\OUT\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\OUT\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\OUT\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dialogs.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraDialogs.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CxTableList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CxTableList.Designer.cs">
+      <DependentUpon>CxTableList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegime.cs" />
+    <Compile Include="FxBaseEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FxBaseEditForm.Designer.cs">
+      <DependentUpon>FxBaseEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FxBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FxBaseForm.Designer.cs">
+      <DependentUpon>FxBaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FxBaseFormExtention.cs" />
+    <Compile Include="FxBaseSimpleDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FxBaseSimpleDialog.Designer.cs">
+      <DependentUpon>FxBaseSimpleDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FxEntitySelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FxEntitySelector.Designer.cs">
+      <DependentUpon>FxEntitySelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FxLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FxLoading.Designer.cs">
+      <DependentUpon>FxLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListItemEventArgs.cs" />
+    <Compile Include="ListItemEventHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\TxTableList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Templates\TxTableList.Designer.cs">
+      <DependentUpon>TxTableList.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CxTableList.resx">
+      <DependentUpon>CxTableList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FxBaseEditForm.resx">
+      <DependentUpon>FxBaseEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FxBaseForm.resx">
+      <DependentUpon>FxBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FxBaseSimpleDialog.resx">
+      <DependentUpon>FxBaseSimpleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FxEntitySelector.resx">
+      <DependentUpon>FxEntitySelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FxLoading.resx">
+      <DependentUpon>FxLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\TxTableList.resx">
+      <DependentUpon>TxTableList.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh2_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addfile_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deletelist_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preview_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Socrat.Lib\Socrat.Lib.csproj">
+      <Project>{c24f6695-a861-42fe-b5ae-5854ec349c71}</Project>
+      <Name>Socrat.Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Socrat.Log.Lib\Socrat.Log.Lib.csproj">
+      <Project>{0ce4c1bf-c229-4c0e-aeea-a2d28a4dc194}</Project>
+      <Name>Socrat.Log.Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Socrat.Log.Model\Socrat.Log.Model.csproj">
+      <Project>{0d1977c3-4eab-4b5e-82ec-52b21a9ff4be}</Project>
+      <Name>Socrat.Log.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Socrat.Spreadsheet\Socrat.Module.Spreadsheet.csproj">
+      <Project>{1ea6cdfa-f95b-489a-b9d0-fb429717f990}</Project>
+      <Name>Socrat.Module.Spreadsheet</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxlsx_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reapplyfilter_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reapplyfilter_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clearfilter_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clearfilter_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAbb.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_16x16.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

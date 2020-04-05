@@ -1,0 +1,1687 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1FB52A12-BFC0-4681-B144-C75092C1856B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Socrat.References</RootNamespace>
+    <AssemblyName>Socrat.References</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\OUT\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\OUT\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddressButtonEditAssistent.cs" />
+    <Compile Include="AddressLookUpEditAssistent.cs" />
+    <Compile Include="Address\FxAddressEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Address\FxAddressEdit.Designer.cs">
+      <DependentUpon>FxAddressEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Address\FxAddressElements.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Address\FxAddressElements.Designer.cs">
+      <DependentUpon>FxAddressElements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Address\FxAddressElementType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Address\FxAddressElementType.Designer.cs">
+      <DependentUpon>FxAddressElementType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Address\FxAddresses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Address\FxAddresses.Designer.cs">
+      <DependentUpon>FxAddresses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bank\FxAccountEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bank\FxAccountEdit.Designer.cs">
+      <DependentUpon>FxAccountEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bank\FxAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bank\FxAccounts.Designer.cs">
+      <DependentUpon>FxAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bank\FxBankEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bank\FxBankEdit.Designer.cs">
+      <DependentUpon>FxBankEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bank\FxBanks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bank\FxBanks.Designer.cs">
+      <DependentUpon>FxBanks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bank\FxCurrency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bank\FxCurrency.Designer.cs">
+      <DependentUpon>FxCurrency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bank\FxCurrencyEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bank\FxCurrencyEdit.Designer.cs">
+      <DependentUpon>FxCurrencyEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\FxCountres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\FxCountres.Designer.cs">
+      <DependentUpon>FxCountres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\FxCountryEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\FxCountryEdit.Designer.cs">
+      <DependentUpon>FxCountryEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contact\FxCustomerContactEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contact\FxCustomerContactEdit.Designer.cs">
+      <DependentUpon>FxCustomerContactEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\CxContractTenderFormulas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contract\CxContractTenderFormulas.Designer.cs">
+      <DependentUpon>CxContractTenderFormulas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contact\CxCoworkerContacts.cs" />
+    <Compile Include="Contact\CxCoworkerContacts.Designer.cs">
+      <DependentUpon>CxCoworkerContacts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contact\FxContactTypeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contact\FxContactTypeEdit.Designer.cs">
+      <DependentUpon>FxContactTypeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contact\FxContactTypeEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contact\FxContactTypeEditor.Designer.cs">
+      <DependentUpon>FxContactTypeEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contact\FxContactTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contact\FxContactTypes.Designer.cs">
+      <DependentUpon>FxContactTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contact\FxCoworkerContactEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contact\FxCoworkerContactEdit.Designer.cs">
+      <DependentUpon>FxCoworkerContactEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\ContractFilterType.cs" />
+    <Compile Include="Contract\ContractsFilter.cs" />
+    <Compile Include="Contract\CxAgreements.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contract\CxAgreements.Designer.cs">
+      <DependentUpon>CxAgreements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Address\CxAddressContacts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Address\CxAddressContacts.Designer.cs">
+      <DependentUpon>CxAddressContacts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\CxContractAddresses.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contract\CxContractAddresses.Designer.cs">
+      <DependentUpon>CxContractAddresses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\CxContractPrices.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contract\CxContractPrices.Designer.cs">
+      <DependentUpon>CxContractPrices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\CxContracts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contract\CxContracts.Designer.cs">
+      <DependentUpon>CxContracts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\CxContractShippingSquares.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contract\CxContractShippingSquares.Designer.cs">
+      <DependentUpon>CxContractShippingSquares.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\FxAddressContactEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\FxAddressContactEdit.Designer.cs">
+      <DependentUpon>FxAddressContactEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\FxAddressAndContactsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\FxAddressAndContactsEdit.Designer.cs">
+      <DependentUpon>FxAddressAndContactsEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\FxContractEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\FxContractEdit.Designer.cs">
+      <DependentUpon>FxContractEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\FxContractPriceEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\FxContractPriceEdit.Designer.cs">
+      <DependentUpon>FxContractPriceEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\FxContracts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\FxContracts.Designer.cs">
+      <DependentUpon>FxContracts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\FxContractShippingSquareEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\FxContractShippingSquareEdit.Designer.cs">
+      <DependentUpon>FxContractShippingSquareEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\FxContractTenderFormulaEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\FxContractTenderFormulaEdit.Designer.cs">
+      <DependentUpon>FxContractTenderFormulaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\FxContractTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\FxContractTypes.Designer.cs">
+      <DependentUpon>FxContractTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\FxCustomersContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\FxCustomersContract.Designer.cs">
+      <DependentUpon>FxCustomersContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CxCustomerAccounts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customer\CxCustomerAccounts.Designer.cs">
+      <DependentUpon>CxCustomerAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CxCustomerAddresses.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customer\CxCustomerAddresses.Designer.cs">
+      <DependentUpon>CxCustomerAddresses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CxCustomerContacts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customer\CxCustomerContacts.Designer.cs">
+      <DependentUpon>CxCustomerContacts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CxCustomerContracts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customer\CxCustomerContracts.Designer.cs">
+      <DependentUpon>CxCustomerContracts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CxCustomerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customer\CxCustomerFeedbackContacts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customer\CxCustomerFeedbackContacts.Designer.cs">
+      <DependentUpon>CxCustomerFeedbackContacts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CxCustomerOptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customer\CxCustomerOptions.Designer.cs">
+      <DependentUpon>CxCustomerOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CxCustomerPersonal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customer\CxCustomerPersonal.Designer.cs">
+      <DependentUpon>CxCustomerPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\FxCustomerAddressEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\FxCustomerAddressEdit.Designer.cs">
+      <DependentUpon>FxCustomerAddressEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\FxOpfEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\FxOpfEdit.Designer.cs">
+      <DependentUpon>FxOpfEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\FxOpFs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\FxOpFs.Designer.cs">
+      <DependentUpon>FxOpFs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ButtonEditAssistent.cs" />
+    <Compile Include="CxGenericListTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CxGenericListTable.Designer.cs">
+      <DependentUpon>CxGenericListTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LookUpEditEditAssistent.cs" />
+    <Compile Include="Materials\CxMaterialSizeTypes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Materials\CxMaterialSizeTypes.Designer.cs">
+      <DependentUpon>CxMaterialSizeTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\CxMaterialTradeMarks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Materials\CxMaterialTradeMarks.Designer.cs">
+      <DependentUpon>CxMaterialTradeMarks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\FxVendorBrands.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\FxVendorBrands.Designer.cs">
+      <DependentUpon>FxVendorBrands.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\FxVendorMaterialEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\FxVendorMaterialEdit.Designer.cs" />
+    <Compile Include="Price\FxFormTypeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price\FxFormTypeEdit.Designer.cs">
+      <DependentUpon>FxFormTypeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price\FxFormTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price\FxFormTypes.Designer.cs">
+      <DependentUpon>FxFormTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price\FxNewPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price\FxNewPrice.Designer.cs">
+      <DependentUpon>FxNewPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price\FxPriceEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price\FxPriceEdit.Designer.cs">
+      <DependentUpon>FxPriceEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price\FxPriceFormEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price\FxPriceFormEdit.Designer.cs">
+      <DependentUpon>FxPriceFormEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price\FxPricePeriodEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price\FxPricePeriodEdit.Designer.cs">
+      <DependentUpon>FxPricePeriodEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price\FxPricePeriods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price\FxPricePeriods.Designer.cs">
+      <DependentUpon>FxPricePeriods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price\FxPriceProcessingEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price\FxPriceProcessingEdit.Designer.cs">
+      <DependentUpon>FxPriceProcessingEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price\FxPriceProcessings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price\FxPriceProcessings.Designer.cs">
+      <DependentUpon>FxPriceProcessings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price\FxPrices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price\FxPrices.Designer.cs">
+      <DependentUpon>FxPrices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price\FxPriceSelectTypeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price\FxPriceSelectTypeEdit.Designer.cs">
+      <DependentUpon>FxPriceSelectTypeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price\FxPriceSelectTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price\FxPriceSelectTypes.Designer.cs">
+      <DependentUpon>FxPriceSelectTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price\FxPriceSlozEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price\FxPriceSlozEdit.Designer.cs">
+      <DependentUpon>FxPriceSlozEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price\FxPriceSlozes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price\FxPriceSlozes.Designer.cs">
+      <DependentUpon>FxPriceSlozes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price\FxPriceSquRatioEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price\FxPriceSquRatioEdit.Designer.cs">
+      <DependentUpon>FxPriceSquRatioEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price\FxPriceSquRatios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price\FxPriceSquRatios.Designer.cs">
+      <DependentUpon>FxPriceSquRatios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price\FxPriceForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price\FxPriceForms.Designer.cs">
+      <DependentUpon>FxPriceForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price\FxPriceTagTypeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price\FxPriceTagTypeEdit.Designer.cs">
+      <DependentUpon>FxPriceTagTypeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price\FxPriceTagTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price\FxPriceTagTypes.Designer.cs">
+      <DependentUpon>FxPriceTagTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price\FxPriceTypeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price\FxPriceTypeEdit.Designer.cs">
+      <DependentUpon>FxPriceTypeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price\FxPriceTypeMarkTypeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price\FxPriceTypeMarkTypeEdit.Designer.cs">
+      <DependentUpon>FxPriceTypeMarkTypeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price\FxPriceTypeMarkTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price\FxPriceTypeMarkTypes.Designer.cs">
+      <DependentUpon>FxPriceTypeMarkTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price\FxPriceTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price\FxPriceTypes.Designer.cs">
+      <DependentUpon>FxPriceTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price\FxPriceValueEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price\FxPriceValueEdit.Designer.cs">
+      <DependentUpon>FxPriceValueEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price\FxPriceValues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price\FxPriceValues.Designer.cs">
+      <DependentUpon>FxPriceValues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Processings\CxProcessings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Processings\CxProcessings.Designer.cs" />
+    <Compile Include="Processings\CxSurfaceProtectionCoverItems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Processings\CxSurfaceProtectionCoverItems.Designer.cs" />
+    <Compile Include="Division\FxDepartmentType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Division\FxDepartmentType.Designer.cs">
+      <DependentUpon>FxDepartmentType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Division\CxDivisionContacts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Division\CxDivisionContacts.Designer.cs">
+      <DependentUpon>CxDivisionContacts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Division\CxDivisionCustomers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customer\CxCustomerTableList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customer\CxIPCommon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customer\CxIPCommon.Designer.cs">
+      <DependentUpon>CxIPCommon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CxLegalCommon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customer\CxLegalCommon.Designer.cs">
+      <DependentUpon>CxLegalCommon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CxPersonContacts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customer\CxPersonContacts.Designer.cs">
+      <DependentUpon>CxPersonContacts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CxRefCustomers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customer\CxRefCustomers.Designer.cs">
+      <DependentUpon>CxRefCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\FilterPreset.cs" />
+    <Compile Include="Customer\FxCustomerEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\FxCustomerEdit.Designer.cs">
+      <DependentUpon>FxCustomerEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\FxCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\FxCustomers.Designer.cs">
+      <DependentUpon>FxCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\FxPersonContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\FxPersonContact.Designer.cs">
+      <DependentUpon>FxPersonContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\FxPersonEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\FxPersonEdit.Designer.cs">
+      <DependentUpon>FxPersonEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\ICustomerControl.cs" />
+    <Compile Include="Division\CxDivisionCoworkers.cs" />
+    <Compile Include="Division\CxDivisionCoworkers.Designer.cs">
+      <DependentUpon>CxDivisionCoworkers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Division\CxDivisionSignatures.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Division\CxDivisionSignatures.Designer.cs">
+      <DependentUpon>CxDivisionSignatures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Division\FxCowokers.cs" />
+    <Compile Include="Division\FxCowokers.Designer.cs">
+      <DependentUpon>FxCowokers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Division\FxCoworkerEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Division\FxCoworkerEdit.Designer.cs">
+      <DependentUpon>FxCoworkerEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Division\FxDepartmentTypeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Division\FxDepartmentTypeEdit.Designer.cs">
+      <DependentUpon>FxDepartmentTypeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Division\FxDivisionContactEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Division\FxDivisionContactEdit.Designer.cs">
+      <DependentUpon>FxDivisionContactEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Division\FxDivisionCoworkerEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Division\FxDivisionCoworkerEdit.Designer.cs">
+      <DependentUpon>FxDivisionCoworkerEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Division\FxDivisionEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Division\FxDivisionEdit.Designer.cs">
+      <DependentUpon>FxDivisionEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Division\FxDivisions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Division\FxDivisions.Designer.cs">
+      <DependentUpon>FxDivisions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Division\FxDivisionSignatureEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Division\FxDivisionSignatureEdit.Designer.cs">
+      <DependentUpon>FxDivisionSignatureEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Division\FxWorkPositionEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Division\FxWorkPositionEdit.Designer.cs">
+      <DependentUpon>FxWorkPositionEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Division\FxWorkPositions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Division\FxWorkPositions.Designer.cs">
+      <DependentUpon>FxWorkPositions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Document\FxDocumentSignatureTypeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Document\FxDocumentSignatureTypeEdit.Designer.cs">
+      <DependentUpon>FxDocumentSignatureTypeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Document\FxDocumentSignatureTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Document\FxDocumentSignatureTypes.Designer.cs">
+      <DependentUpon>FxDocumentSignatureTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Document\FxDocumentTypeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Document\FxDocumentTypeEdit.Designer.cs">
+      <DependentUpon>FxDocumentTypeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Document\FxDocumentTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Document\FxDocumentTypes.Designer.cs">
+      <DependentUpon>FxDocumentTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Document\FxDocumets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Document\FxDocumets.Designer.cs">
+      <DependentUpon>FxDocumets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formula\CxFormulaItemProperties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formula\CxFormulaItemProperties.Designer.cs">
+      <DependentUpon>CxFormulaItemProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formula\CxFrameItemProperies.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formula\CxFrameItemProperies.Designer.cs">
+      <DependentUpon>CxFrameItemProperies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formula\CxGlassItemProperties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formula\CxGlassItemProperties.Designer.cs">
+      <DependentUpon>CxGlassItemProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formula\CxInsetItemProperties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formula\CxInsetItemProperties.Designer.cs">
+      <DependentUpon>CxInsetItemProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formula\CxInsetPosition.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formula\CxInsetPosition.Designer.cs">
+      <DependentUpon>CxInsetPosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formula\CxItemProcessing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formula\CxItemProcessing.Designer.cs">
+      <DependentUpon>CxItemProcessing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formula\CxItemProperties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formula\CxItemProperties.Designer.cs">
+      <DependentUpon>CxItemProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formula\FormulaDrawer.cs" />
+    <Compile Include="Formula\FormulaParser.cs" />
+    <Compile Include="Formula\FxFormulaEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formula\FxFormulaEdit.Designer.cs">
+      <DependentUpon>FxFormulaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formula\FxInsetPositionEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formula\FxInsetPositionEdit.Designer.cs">
+      <DependentUpon>FxInsetPositionEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formula\MaterialFinder.cs" />
+    <Compile Include="FxGenericListTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FxGenericListTable.Designer.cs">
+      <DependentUpon>FxGenericListTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FxNamedEntityEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FxNamedEntityEdit.Designer.cs">
+      <DependentUpon>FxNamedEntityEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FxShortNamedEntityEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FxShortNamedEntityEdit.Designer.cs">
+      <DependentUpon>FxShortNamedEntityEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Processings\FxProcessingEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Processings\FxProcessingEdit.Designer.cs">
+      <DependentUpon>FxProcessingEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Processings\FxProcessings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Processings\FxProcessings.Designer.cs">
+      <DependentUpon>FxProcessings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Processings\FxProcessingTypeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Processings\FxProcessingTypeEdit.Designer.cs">
+      <DependentUpon>FxProcessingTypeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Processings\FxProcessingTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Processings\FxProcessingTypes.Designer.cs">
+      <DependentUpon>FxProcessingTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Processings\FxSurfaceCoverProtectionEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Processings\FxSurfaceCoverProtectionEdit.Designer.cs" />
+    <Compile Include="LookupEditAssistent.cs" />
+    <Compile Include="Materials\CxFieldValues.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Materials\CxFieldValues.Designer.cs">
+      <DependentUpon>CxFieldValues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\CxMaterialFields.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Materials\CxMaterialFields.Designer.cs">
+      <DependentUpon>CxMaterialFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\CxMaterialSpecProperties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Materials\CxMaterialSpecProperties.Designer.cs">
+      <DependentUpon>CxMaterialSpecProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\CxVendorBrands.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Materials\CxVendorBrands.Designer.cs">
+      <DependentUpon>CxVendorBrands.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\CxVendorMaterialNom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Materials\CxVendorMaterialNom.Designer.cs">
+      <DependentUpon>CxVendorMaterialNom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\CxVendorMaterials.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Materials\CxVendorMaterials.Designer.cs">
+      <DependentUpon>CxVendorMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\CxVendorTradeMarks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Materials\CxVendorTradeMarks.Designer.cs">
+      <DependentUpon>CxVendorTradeMarks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\FxBrandEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\FxBrandEdit.Designer.cs">
+      <DependentUpon>FxBrandEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\FxFieldValueEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\FxFieldValueEdit.Designer.cs">
+      <DependentUpon>FxFieldValueEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\FxFilteredMaterialNoms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\FxFilteredMaterialNoms.Designer.cs">
+      <DependentUpon>FxFilteredMaterialNoms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\FxMaterialFieldEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\FxMaterialFieldEdit.Designer.cs">
+      <DependentUpon>FxMaterialFieldEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\FxMaterialNomEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\FxMaterialNomEdit.Designer.cs">
+      <DependentUpon>FxMaterialNomEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\FxMaterialMarkTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\FxMaterialMarkTypes.Designer.cs">
+      <DependentUpon>FxMaterialMarkTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\FxMaterialMarkTypeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\FxMaterialMarkTypeEdit.Designer.cs">
+      <DependentUpon>FxMaterialMarkTypeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\FxMaterialSizeTypeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\FxMaterialSizeTypeEdit.Designer.cs">
+      <DependentUpon>FxMaterialSizeTypeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\FxMaterialSizeTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\FxMaterialSizeTypes.Designer.cs">
+      <DependentUpon>FxMaterialSizeTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\FxMaterialNomenclature.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\FxMaterialNomenclature.Designer.cs">
+      <DependentUpon>FxMaterialNomenclature.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\FxMaterialSpecPropertyEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\FxMaterialSpecPropertyEdit.Designer.cs">
+      <DependentUpon>FxMaterialSpecPropertyEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\FxMaterialTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\FxMaterialTypes.Designer.cs">
+      <DependentUpon>FxMaterialTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\FxMaterials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\FxMaterials.Designer.cs">
+      <DependentUpon>FxMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\FxMaterialSizeTypeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\FxMaterialSizeTypeList.Designer.cs">
+      <DependentUpon>FxMaterialSizeTypeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\FxMaterialEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\FxMaterialEdit.Designer.cs">
+      <DependentUpon>FxMaterialEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\FxMeasureEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\FxMeasureEdit.Designer.cs">
+      <DependentUpon>FxMeasureEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\FxMeasures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\FxMeasures.Designer.cs">
+      <DependentUpon>FxMeasures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\FxProcessingEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\FxProcessingEdit.Designer.cs">
+      <DependentUpon>FxProcessingEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\FxProcessings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\FxProcessings.Designer.cs">
+      <DependentUpon>FxProcessings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\FxTradeMarkEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\FxTradeMarkEdit.Designer.cs">
+      <DependentUpon>FxTradeMarkEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\FxTradeMarks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\FxTradeMarks.Designer.cs">
+      <DependentUpon>FxTradeMarks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\FxVendorEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\FxVendorEdit.Designer.cs">
+      <DependentUpon>FxVendorEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\FxVendorMaterialNomEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\FxVendorMaterialNomEdit.Designer.cs">
+      <DependentUpon>FxVendorMaterialNomEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\FxVendorMaterialNoms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\FxVendorMaterialNoms.Designer.cs">
+      <DependentUpon>FxVendorMaterialNoms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\FxVendorMaterials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\FxVendorMaterials.Designer.cs">
+      <DependentUpon>FxVendorMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\FxVendors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\FxVendors.Designer.cs">
+      <DependentUpon>FxVendors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\FxBrendTradeMarks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\FxBrendTradeMarks.Designer.cs">
+      <DependentUpon>FxBrendTradeMarks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\MaterialAddCommand.cs" />
+    <Compile Include="Order\FxOrderStatusEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\FxOrderStatusEditor.Designer.cs">
+      <DependentUpon>FxOrderStatusEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\FxOrderStatuses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\FxOrderStatuses.Designer.cs">
+      <DependentUpon>FxOrderStatuses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\FxOrderStatusesMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\FxOrderStatusesMap.Designer.cs">
+      <DependentUpon>FxOrderStatusesMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\FxPaymentTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\FxPaymentTypes.Designer.cs">
+      <DependentUpon>FxPaymentTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\FxSlozTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\FxSlozTypes.Designer.cs">
+      <DependentUpon>FxSlozTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Params\AppParams.cs" />
+    <Compile Include="Params\FxParams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Params\FxParams.Designer.cs">
+      <DependentUpon>FxParams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price\CxPriceList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Price\CxPriceList.Designer.cs">
+      <DependentUpon>CxPriceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price\CxPriceTypes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Price\CxPriceTypes.Designer.cs">
+      <DependentUpon>CxPriceTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price\CxBlinderPrice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Price\CxBlinderPrice.Designer.cs">
+      <DependentUpon>CxBlinderPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price\FxBlinderPriceEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price\FxBlinderPriceEditor.Designer.cs">
+      <DependentUpon>FxBlinderPriceEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price\FxPriceSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price\FxPriceSelector.Designer.cs">
+      <DependentUpon>FxPriceSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price\FxPriceElementEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price\FxPriceElementEdit.Designer.cs">
+      <DependentUpon>FxPriceElementEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price\FxPriceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price\FxPriceList.Designer.cs">
+      <DependentUpon>FxPriceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReferenceCommand.cs" />
+    <Compile Include="ReferncesUtils.cs" />
+    <Compile Include="SelectionDialgsFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Socrat.Core\Socrat.Core.csproj">
+      <Project>{de07c69d-3dd8-43f9-9571-aa2e3873dd56}</Project>
+      <Name>Socrat.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Socrat.DataProvider\Socrat.DataProvider.csproj">
+      <Project>{9e2b0cf5-3f34-4d8d-aac2-96ad5232bc65}</Project>
+      <Name>Socrat.DataProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Socrat.Lib\Socrat.Lib.csproj">
+      <Project>{c24f6695-a861-42fe-b5ae-5854ec349c71}</Project>
+      <Name>Socrat.Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Socrat.Log.Lib\Socrat.Log.Lib.csproj">
+      <Project>{0ce4c1bf-c229-4c0e-aeea-a2d28a4dc194}</Project>
+      <Name>Socrat.Log.Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Socrat.Log.Model\Socrat.Log.Model.csproj">
+      <Project>{0d1977c3-4eab-4b5e-82ec-52b21a9ff4be}</Project>
+      <Name>Socrat.Log.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Socrat.Log.Viewer\Socrat.Log.Viewer.csproj">
+      <Project>{6ad16ad4-4ec9-4bbf-ae54-8f3ab42578be}</Project>
+      <Name>Socrat.Log.Viewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Socrat.Spreadsheet\Socrat.Module.Spreadsheet.csproj">
+      <Project>{1ea6cdfa-f95b-489a-b9d0-fb429717f990}</Project>
+      <Name>Socrat.Module.Spreadsheet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Socrat.UI.Core\Socrat.UI.Core.csproj">
+      <Project>{fe5c0691-6941-457e-a6ed-1bd15bc25aec}</Project>
+      <Name>Socrat.UI.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Address\FxAddressEdit.resx">
+      <DependentUpon>FxAddressEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Address\FxAddressElements.resx">
+      <DependentUpon>FxAddressElements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Address\FxAddressElementType.resx">
+      <DependentUpon>FxAddressElementType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Address\FxAddresses.resx">
+      <DependentUpon>FxAddresses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bank\FxAccountEdit.resx">
+      <DependentUpon>FxAccountEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bank\FxAccounts.resx">
+      <DependentUpon>FxAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bank\FxBankEdit.resx">
+      <DependentUpon>FxBankEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bank\FxBanks.resx">
+      <DependentUpon>FxBanks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bank\FxCurrency.resx">
+      <DependentUpon>FxCurrency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bank\FxCurrencyEdit.resx">
+      <DependentUpon>FxCurrencyEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\FxCountres.resx">
+      <DependentUpon>FxCountres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\FxCountryEdit.resx">
+      <DependentUpon>FxCountryEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contact\FxCustomerContactEdit.resx">
+      <DependentUpon>FxCustomerContactEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\CxContractTenderFormulas.resx">
+      <DependentUpon>CxContractTenderFormulas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contact\FxContactTypeEdit.resx">
+      <DependentUpon>FxContactTypeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contact\FxContactTypeEditor.resx">
+      <DependentUpon>FxContactTypeEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contact\FxContactTypes.resx">
+      <DependentUpon>FxContactTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contact\FxCoworkerContactEdit.resx">
+      <DependentUpon>FxCoworkerContactEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\CxAgreements.resx">
+      <DependentUpon>CxAgreements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Address\CxAddressContacts.resx">
+      <DependentUpon>CxAddressContacts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\CxContractPrices.resx">
+      <DependentUpon>CxContractPrices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\CxContracts.resx">
+      <DependentUpon>CxContracts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\FxAddressContactEdit.resx">
+      <DependentUpon>FxAddressContactEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\FxAddressAndContactsEdit.resx">
+      <DependentUpon>FxAddressAndContactsEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\FxContractEdit.resx">
+      <DependentUpon>FxContractEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\FxContractPriceEdit.resx">
+      <DependentUpon>FxContractPriceEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\FxContracts.resx">
+      <DependentUpon>FxContracts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\FxContractShippingSquareEdit.resx">
+      <DependentUpon>FxContractShippingSquareEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\FxContractTenderFormulaEdit.resx">
+      <DependentUpon>FxContractTenderFormulaEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\FxContractTypes.resx">
+      <DependentUpon>FxContractTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\FxCustomersContract.resx">
+      <DependentUpon>FxCustomersContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CxCustomerAccounts.resx">
+      <DependentUpon>CxCustomerAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CxCustomerAddresses.resx">
+      <DependentUpon>CxCustomerAddresses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CxCustomerContacts.resx">
+      <DependentUpon>CxCustomerContacts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CxCustomerContracts.resx">
+      <DependentUpon>CxCustomerContracts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CxCustomerControl.resx">
+      <DependentUpon>CxCustomerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CxCustomerFeedbackContacts.resx">
+      <DependentUpon>CxCustomerFeedbackContacts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CxCustomerOptions.resx">
+      <DependentUpon>CxCustomerOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CxCustomerPersonal.resx">
+      <DependentUpon>CxCustomerPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CxIPCommon.resx">
+      <DependentUpon>CxIPCommon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CxLegalCommon.resx">
+      <DependentUpon>CxLegalCommon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CxPersonContacts.resx">
+      <DependentUpon>CxPersonContacts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CxRefCustomers.resx">
+      <DependentUpon>CxRefCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\FxCustomerAddressEdit.resx">
+      <DependentUpon>FxCustomerAddressEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\FxCustomerEdit.resx">
+      <DependentUpon>FxCustomerEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\FxCustomers.resx">
+      <DependentUpon>FxCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\FxOpfEdit.resx">
+      <DependentUpon>FxOpfEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\FxOpFs.resx">
+      <DependentUpon>FxOpFs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\FxPersonContact.resx">
+      <DependentUpon>FxPersonContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\FxPersonEdit.resx">
+      <DependentUpon>FxPersonEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CxGenericListTable.resx">
+      <DependentUpon>CxGenericListTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\CxMaterialSizeTypes.resx">
+      <DependentUpon>CxMaterialSizeTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\CxMaterialTradeMarks.resx">
+      <DependentUpon>CxMaterialTradeMarks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\FxVendorBrands.resx">
+      <DependentUpon>FxVendorBrands.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\FxVendorMaterialEdit.resx" />
+    <EmbeddedResource Include="Price\FxFormTypeEdit.resx">
+      <DependentUpon>FxFormTypeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price\FxFormTypes.resx">
+      <DependentUpon>FxFormTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price\FxNewPrice.resx">
+      <DependentUpon>FxNewPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price\FxPriceEdit.resx">
+      <DependentUpon>FxPriceEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price\FxPriceFormEdit.resx">
+      <DependentUpon>FxPriceFormEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price\FxPricePeriodEdit.resx">
+      <DependentUpon>FxPricePeriodEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price\FxPricePeriods.resx">
+      <DependentUpon>FxPricePeriods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price\FxPriceProcessingEdit.resx">
+      <DependentUpon>FxPriceProcessingEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price\FxPriceProcessings.resx">
+      <DependentUpon>FxPriceProcessings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price\FxPrices.resx">
+      <DependentUpon>FxPrices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price\FxPriceSelectTypeEdit.resx">
+      <DependentUpon>FxPriceSelectTypeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price\FxPriceSelectTypes.resx">
+      <DependentUpon>FxPriceSelectTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price\FxPriceSlozEdit.resx">
+      <DependentUpon>FxPriceSlozEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price\FxPriceSlozes.resx">
+      <DependentUpon>FxPriceSlozes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price\FxPriceSquRatioEdit.resx">
+      <DependentUpon>FxPriceSquRatioEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price\FxPriceSquRatios.resx">
+      <DependentUpon>FxPriceSquRatios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price\FxPriceForms.resx">
+      <DependentUpon>FxPriceForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price\FxPriceTagTypeEdit.resx">
+      <DependentUpon>FxPriceTagTypeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price\FxPriceTagTypes.resx">
+      <DependentUpon>FxPriceTagTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price\FxPriceTypeEdit.resx">
+      <DependentUpon>FxPriceTypeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price\FxPriceTypeMarkTypeEdit.resx">
+      <DependentUpon>FxPriceTypeMarkTypeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price\FxPriceTypeMarkTypes.resx">
+      <DependentUpon>FxPriceTypeMarkTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price\FxPriceTypes.resx">
+      <DependentUpon>FxPriceTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price\FxPriceValueEdit.resx">
+      <DependentUpon>FxPriceValueEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price\FxPriceValues.resx">
+      <DependentUpon>FxPriceValues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processings\CxProcessings.resx" />
+    <EmbeddedResource Include="Processings\CxSurfaceProtectionCoverItems.resx" />
+    <EmbeddedResource Include="Division\FxDepartmentType.resx">
+      <DependentUpon>FxDepartmentType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Division\CxDivisionContacts.resx">
+      <DependentUpon>CxDivisionContacts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Division\CxDivisionSignatures.resx">
+      <DependentUpon>CxDivisionSignatures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Division\FxCowokers.resx">
+      <DependentUpon>FxCowokers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Division\FxCoworkerEdit.resx">
+      <DependentUpon>FxCoworkerEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Division\FxDepartmentTypeEdit.resx">
+      <DependentUpon>FxDepartmentTypeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Division\FxDivisionContactEdit.resx">
+      <DependentUpon>FxDivisionContactEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Division\FxDivisionCoworkerEdit.resx">
+      <DependentUpon>FxDivisionCoworkerEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Division\FxDivisionEdit.resx">
+      <DependentUpon>FxDivisionEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Division\FxDivisions.resx">
+      <DependentUpon>FxDivisions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Division\FxDivisionSignatureEdit.resx">
+      <DependentUpon>FxDivisionSignatureEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Division\FxWorkPositionEdit.resx">
+      <DependentUpon>FxWorkPositionEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Division\FxWorkPositions.resx">
+      <DependentUpon>FxWorkPositions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\FxDocumentSignatureTypeEdit.resx">
+      <DependentUpon>FxDocumentSignatureTypeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\FxDocumentSignatureTypes.resx">
+      <DependentUpon>FxDocumentSignatureTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\FxDocumentTypeEdit.resx">
+      <DependentUpon>FxDocumentTypeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\FxDocumentTypes.resx">
+      <DependentUpon>FxDocumentTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\FxDocumets.resx">
+      <DependentUpon>FxDocumets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formula\CxFormulaItemProperties.resx">
+      <DependentUpon>CxFormulaItemProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formula\CxFrameItemProperies.resx">
+      <DependentUpon>CxFrameItemProperies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formula\CxGlassItemProperties.resx">
+      <DependentUpon>CxGlassItemProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formula\CxInsetItemProperties.resx">
+      <DependentUpon>CxInsetItemProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formula\CxInsetPosition.resx">
+      <DependentUpon>CxInsetPosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formula\CxItemProcessing.resx">
+      <DependentUpon>CxItemProcessing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formula\CxItemProperties.resx">
+      <DependentUpon>CxItemProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formula\FxFormulaEdit.resx">
+      <DependentUpon>FxFormulaEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formula\FxInsetPositionEdit.resx">
+      <DependentUpon>FxInsetPositionEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FxGenericListTable.resx">
+      <DependentUpon>FxGenericListTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FxNamedEntityEdit.resx">
+      <DependentUpon>FxNamedEntityEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FxShortNamedEntityEdit.resx">
+      <DependentUpon>FxShortNamedEntityEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processings\FxProcessingEdit.resx">
+      <DependentUpon>FxProcessingEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processings\FxProcessings.resx">
+      <DependentUpon>FxProcessings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processings\FxProcessingTypeEdit.resx">
+      <DependentUpon>FxProcessingTypeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processings\FxProcessingTypes.resx">
+      <DependentUpon>FxProcessingTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processings\FxSurfaceCoverProtectionEdit.resx" />
+    <EmbeddedResource Include="Materials\CxFieldValues.resx">
+      <DependentUpon>CxFieldValues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\CxMaterialFields.resx">
+      <DependentUpon>CxMaterialFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\CxMaterialSpecProperties.resx">
+      <DependentUpon>CxMaterialSpecProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\CxVendorBrands.resx">
+      <DependentUpon>CxVendorBrands.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\CxVendorMaterialNom.resx">
+      <DependentUpon>CxVendorMaterialNom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\CxVendorMaterials.resx">
+      <DependentUpon>CxVendorMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\CxVendorTradeMarks.resx">
+      <DependentUpon>CxVendorTradeMarks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\FxBrandEdit.resx">
+      <DependentUpon>FxBrandEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\FxFieldValueEdit.resx">
+      <DependentUpon>FxFieldValueEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\FxFilteredMaterialNoms.resx">
+      <DependentUpon>FxFilteredMaterialNoms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\FxMaterialFieldEdit.resx">
+      <DependentUpon>FxMaterialFieldEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\FxMaterialNomEdit.resx">
+      <DependentUpon>FxMaterialNomEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\FxMaterialMarkTypes.resx">
+      <DependentUpon>FxMaterialMarkTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\FxMaterialMarkTypeEdit.resx">
+      <DependentUpon>FxMaterialMarkTypeEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\FxMaterialSizeTypeEdit.resx">
+      <DependentUpon>FxMaterialSizeTypeEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\FxMaterialSizeTypes.resx">
+      <DependentUpon>FxMaterialSizeTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\FxMaterialNomenclature.resx">
+      <DependentUpon>FxMaterialNomenclature.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\FxMaterialSpecPropertyEdit.resx">
+      <DependentUpon>FxMaterialSpecPropertyEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\FxMaterialTypes.resx">
+      <DependentUpon>FxMaterialTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\FxMaterials.resx">
+      <DependentUpon>FxMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\FxMaterialSizeTypeList.resx">
+      <DependentUpon>FxMaterialSizeTypeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\FxMaterialEdit.resx">
+      <DependentUpon>FxMaterialEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\FxMeasureEdit.resx">
+      <DependentUpon>FxMeasureEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\FxProcessingEdit.resx">
+      <DependentUpon>FxProcessingEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\FxProcessings.resx">
+      <DependentUpon>FxProcessings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\FxTradeMarkEdit.resx">
+      <DependentUpon>FxTradeMarkEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\FxTradeMarks.resx">
+      <DependentUpon>FxTradeMarks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\FxVendorEdit.resx">
+      <DependentUpon>FxVendorEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\FxVendorMaterialNomEdit.resx">
+      <DependentUpon>FxVendorMaterialNomEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\FxVendorMaterialNoms.resx">
+      <DependentUpon>FxVendorMaterialNoms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\FxVendorMaterials.resx">
+      <DependentUpon>FxVendorMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\FxVendors.resx">
+      <DependentUpon>FxVendors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\FxBrendTradeMarks.resx">
+      <DependentUpon>FxBrendTradeMarks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\FxOrderStatusEditor.resx">
+      <DependentUpon>FxOrderStatusEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\FxOrderStatuses.resx">
+      <DependentUpon>FxOrderStatuses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\FxOrderStatusesMap.resx">
+      <DependentUpon>FxOrderStatusesMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\FxPaymentTypes.resx">
+      <DependentUpon>FxPaymentTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\FxSlozTypes.resx">
+      <DependentUpon>FxSlozTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Params\FxParams.resx">
+      <DependentUpon>FxParams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price\CxPriceList.resx">
+      <DependentUpon>CxPriceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price\CxPriceTypes.resx">
+      <DependentUpon>CxPriceTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price\FxBlinderPriceEditor.resx">
+      <DependentUpon>FxBlinderPriceEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price\FxPriceSelector.resx">
+      <DependentUpon>FxPriceSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price\FxPriceElementEdit.resx">
+      <DependentUpon>FxPriceElementEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price\FxPriceList.resx">
+      <DependentUpon>FxPriceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\Socrat.Model.Coworker.datasource" />
+    <None Include="Properties\DataSources\Socrat.Model.CoworkerContact.datasource" />
+    <None Include="Properties\DataSources\Socrat.Model.Division.datasource" />
+    <None Include="Resources\addfile_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnabb.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clearfilter_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clearfilter_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deletelist_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxlsx_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preview_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reapplyfilter_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reapplyfilter_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh2_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_16x16.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

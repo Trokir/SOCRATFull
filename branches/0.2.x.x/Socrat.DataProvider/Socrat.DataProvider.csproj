@@ -1,0 +1,535 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9E2B0CF5-3F34-4D8D-AAC2-96AD5232BC65}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Socrat.DataProvider</RootNamespace>
+    <AssemblyName>Socrat.DataProvider</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\OUT\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\OUT\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\OUT\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\OUT\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.0.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.0.2\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.EF6, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.EF6.1.1.1\lib\net45\AutoMapper.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="DelegateDecompiler, Version=1.0.0.0, Culture=neutral, PublicKeyToken=93b26a10a04705bd, processorArchitecture=MSIL">
+      <HintPath>..\packages\DelegateDecompiler.0.23.0\lib\net40-client\DelegateDecompiler.dll</HintPath>
+    </Reference>
+    <Reference Include="DelegateDecompiler.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=93b26a10a04705bd, processorArchitecture=MSIL">
+      <HintPath>..\packages\DelegateDecompiler.EntityFramework.0.23.0\lib\net45\DelegateDecompiler.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Reflection, Version=1.1.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Reflection.1.1.0.0\lib\Mono.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Address.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AddressContact.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AddressElement.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AddressElementType.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AddressItem.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppParam.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Bank.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaseRepository.cs" />
+    <Compile Include="Brand.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContactType.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Contract.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContractAddress.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContractPrice.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContractShippingSquare.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContractTenderFormula.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContractType.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Country.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Coworker.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CoworkerContact.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CoworkerPosition.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Currency.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerAddress.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerProp.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPropType.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerType.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DateTimeRange.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentType.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Division.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DivisionContact.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DivisionCustomer.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DivisionSignature.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentSignature.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentSignatureType.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentType.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EFDataFactory.cs" />
+    <Compile Include="EntityFrameworkConnection.cs" />
+    <Compile Include="Enums\ContactTypes.cs" />
+    <Compile Include="Formula.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FormulaItem.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FormulaItemFrameProperty.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FormulaItemGlassProperty.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FormulaItemTriplexProperty.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Gender.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IRepository.cs" />
+    <Compile Include="MapperConfig.cs" />
+    <Compile Include="Material.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialMarkType.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialNom.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialSizeType.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialSpecProperty.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialType.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Measure.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\AddressContact.cs" />
+    <Compile Include="Models\AddressElement.cs" />
+    <Compile Include="Models\AppParam.cs" />
+    <Compile Include="Models\Bank.cs" />
+    <Compile Include="Models\Brand.cs" />
+    <Compile Include="Models\ContactType.cs" />
+    <Compile Include="Models\Contract.cs" />
+    <Compile Include="Models\ContractAddress.cs" />
+    <Compile Include="Models\ContractPrice.cs" />
+    <Compile Include="Models\ContractShippingSquare.cs" />
+    <Compile Include="Models\ContractTenderFormula.cs" />
+    <Compile Include="Models\ContractType.cs" />
+    <Compile Include="Models\Country.cs" />
+    <Compile Include="Models\Coworker.cs" />
+    <Compile Include="Models\CoworkerContact.cs" />
+    <Compile Include="Models\CoworkerPosition.cs" />
+    <Compile Include="Models\Currency.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\CustomerAddress.cs" />
+    <Compile Include="Models\CustomerProp.cs" />
+    <Compile Include="Models\CustomerPropType.cs" />
+    <Compile Include="Models\CustomerType.cs" />
+    <Compile Include="Models\DepartmentType.cs" />
+    <Compile Include="Models\Division.cs" />
+    <Compile Include="Models\DivisionContact.cs" />
+    <Compile Include="Models\DivisionCustomer.cs" />
+    <Compile Include="Models\DivisionSignature.cs" />
+    <Compile Include="Models\DocumentSignatureType.cs" />
+    <Compile Include="Models\DocumentType.cs" />
+    <Compile Include="Models\Formula.cs" />
+    <Compile Include="Models\FormulaItem.cs" />
+    <Compile Include="Models\Gender.cs" />
+    <Compile Include="Models\Material.cs" />
+    <Compile Include="Models\MaterialMarkType.cs" />
+    <Compile Include="Models\MaterialSizeType.cs" />
+    <Compile Include="Models\MaterialNom.cs" />
+    <Compile Include="Models\MaterialType.cs" />
+    <Compile Include="Models\Measure.cs" />
+    <Compile Include="Models\Module.cs" />
+    <Compile Include="Models\OPF.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderRow.cs" />
+    <Compile Include="Models\PaymentType.cs" />
+    <Compile Include="Models\Processing.cs" />
+    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\RoleTreeItem.cs" />
+    <Compile Include="Models\Shape.cs" />
+    <Compile Include="Models\ShapePoint.cs" />
+    <Compile Include="Models\SlozType.cs" />
+    <Compile Include="Models\TradeMark.cs" />
+    <Compile Include="Models\Vendor.cs" />
+    <Compile Include="Models\VendorMaterialNom.cs" />
+    <Compile Include="Models\VendorMaterial.cs" />
+    <Compile Include="Models\WorkPosition.cs" />
+    <Compile Include="Module.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OPF.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderRow.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderRowSloz.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderStatus.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderStatusHistory.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentType.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Price.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PriceFarmeType.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PriceFilm.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PriceGlassCut.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PriceMargin.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PriceSloz.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PriceSpro.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PriceSprosComponent.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PriceSquare.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PriceSquareCustom.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PriceType.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Processing.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repos\AddressContactRepository.cs" />
+    <Compile Include="Repos\BrandRepository.cs" />
+    <Compile Include="Repos\CustomerAddressRepository.cs" />
+    <Compile Include="Repos\FormulaItemRepository.cs" />
+    <Compile Include="Repos\FormulaRepository.cs" />
+    <Compile Include="Repos\MaterialMarkTypeRepository.cs" />
+    <Compile Include="Repos\MaterialSizeTypeRepository.cs" />
+    <Compile Include="Repos\MaterialNomRepository.cs" />
+    <Compile Include="Repos\MaterialTypeRepository.cs" />
+    <Compile Include="Repos\MaterialRepository.cs" />
+    <Compile Include="Repos\MeasureRepository.cs" />
+    <Compile Include="Repos\ProcessingRepository.cs" />
+    <Compile Include="Repos\ShapePointRepository.cs" />
+    <Compile Include="Repos\ShapeRepository.cs" />
+    <Compile Include="Repos\TradeMarkRepository.cs" />
+    <Compile Include="Repos\VendorMaterialNomRepository.cs" />
+    <Compile Include="Repos\VendorMaterialRepository.cs" />
+    <Compile Include="Repos\VendorRepository.cs" />
+    <Compile Include="Role.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoleTreeItem.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shape.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShapePoint.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SlozType.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SocratEntities.cs" />
+    <Compile Include="Models\TreeItem.cs" />
+    <Compile Include="Models\TreeItemType.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Repos\AccountRepository.cs" />
+    <Compile Include="Repos\AddressElementtRepository.cs" />
+    <Compile Include="Repos\AddressRepository.cs" />
+    <Compile Include="Repos\AppParamRepository.cs" />
+    <Compile Include="Repos\BankRepository.cs" />
+    <Compile Include="Repos\ContactTypeRepository.cs" />
+    <Compile Include="Repos\ContractAddressRepository.cs" />
+    <Compile Include="Repos\ContractPriceRepository.cs" />
+    <Compile Include="Repos\ContractRepository.cs" />
+    <Compile Include="Repos\ContractShippingSquareeRepository.cs" />
+    <Compile Include="Repos\ContractTenderFormulaRepository.cs" />
+    <Compile Include="Repos\ContractTypeRepository.cs" />
+    <Compile Include="Repos\CountryRepository.cs" />
+    <Compile Include="Repos\CoworkerContactRepository.cs" />
+    <Compile Include="Repos\CoworkerPositionRepository.cs" />
+    <Compile Include="Repos\CoworkerRepository.cs" />
+    <Compile Include="Repos\CurrencyRepository.cs" />
+    <Compile Include="Repos\CustomerPropRepository.cs" />
+    <Compile Include="Repos\CustomerPropTypeRepository.cs" />
+    <Compile Include="Repos\CustomerRepository.cs" />
+    <Compile Include="Repos\CustomerTypeRepository.cs" />
+    <Compile Include="Repos\DepartmentTypeRepository.cs" />
+    <Compile Include="Repos\DivisionContactRepository.cs" />
+    <Compile Include="Repos\DivisionCustomerRepository.cs" />
+    <Compile Include="Repos\DivisionRepository.cs" />
+    <Compile Include="Repos\DivisionSignatureRepository.cs" />
+    <Compile Include="Repos\DocumentSignatureTypeRepository.cs" />
+    <Compile Include="Repos\DocumentTypeRepository.cs" />
+    <Compile Include="Repos\GenderRepository.cs" />
+    <Compile Include="Repos\ModuleRepository.cs" />
+    <Compile Include="Repos\OPFRepository.cs" />
+    <Compile Include="Repos\OrderRepository.cs" />
+    <Compile Include="Repos\OrderRowRepository.cs" />
+    <Compile Include="Repos\PaymentTypeRepository.cs" />
+    <Compile Include="Repos\RoleRepository.cs" />
+    <Compile Include="Repos\RoleTreeItemRepository.cs" />
+    <Compile Include="Repos\SlozTypeRepository.cs" />
+    <Compile Include="Repos\TreeItemRepository.cs" />
+    <Compile Include="Repos\TreeItemTypeRepository.cs" />
+    <Compile Include="Repos\UserRepository.cs" />
+    <Compile Include="Repos\WorkPositionRepository.cs" />
+    <Compile Include="SocratDbContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SocratDbContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SocratDbContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SocratDbContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SocratDbContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TradeMark.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TreeItem.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TreeItemType.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UniversalRepository.cs" />
+    <Compile Include="User.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VendorMaterial.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VendorMaterialNom.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WorkPosition.cs">
+      <DependentUpon>SocratDbContext.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="SocratDbContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SocratDbContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="SocratDbContext.edmx.diagram">
+      <DependentUpon>SocratDbContext.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Socrat.Lib\Socrat.Lib.csproj">
+      <Project>{c24f6695-a861-42fe-b5ae-5854ec349c71}</Project>
+      <Name>Socrat.Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Socrat.Log.Lib\Socrat.Log.Lib.csproj">
+      <Project>{0ce4c1bf-c229-4c0e-aeea-a2d28a4dc194}</Project>
+      <Name>Socrat.Log.Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Socrat.Model\Socrat.Model.csproj">
+      <Project>{158d13b7-5097-4fe1-b750-2c73cc48e33b}</Project>
+      <Name>Socrat.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SocratDbContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SocratDbContext.edmx</DependentUpon>
+      <LastGenOutput>SocratDbContext.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="SocratDbContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SocratDbContext.edmx</DependentUpon>
+      <LastGenOutput>SocratDbContext.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

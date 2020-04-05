@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0272A468-C75E-4414-82D7-27C0D33C10EE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Socrat.Module.Order</RootNamespace>
+    <AssemblyName>Socrat.Module.Order</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\OUT\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\OUT\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Socrat.Log, Version=2018.10.30.79, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseConverter.cs" />
+    <Compile Include="CxOrderRows.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CxOrderRows.Designer.cs">
+      <DependentUpon>CxOrderRows.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DispOrderConverter.cs" />
+    <Compile Include="FxRowFormulaEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FxRowFormulaEdit.Designer.cs">
+      <DependentUpon>FxRowFormulaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FxFormulas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FxFormulas.Designer.cs">
+      <DependentUpon>FxFormulas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FxFormulaStrEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FxFormulaStrEdit.Designer.cs">
+      <DependentUpon>FxFormulaStrEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FxOrderEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FxOrderEdit.Designer.cs">
+      <DependentUpon>FxOrderEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FxOrderResource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FxOrderResource.Designer.cs">
+      <DependentUpon>FxOrderResource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FxOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FxOrders.Designer.cs">
+      <DependentUpon>FxOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FxOrdersFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FxOrdersFilter.Designer.cs">
+      <DependentUpon>FxOrdersFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceNumerator.cs" />
+    <Compile Include="ModuleOrderStarter.cs" />
+    <Compile Include="OrderNumerator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CxOrders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CxOrders.Designer.cs">
+      <DependentUpon>CxOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Socrat.Core\Socrat.Core.csproj">
+      <Project>{de07c69d-3dd8-43f9-9571-aa2e3873dd56}</Project>
+      <Name>Socrat.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Socrat.DataProvider\Socrat.DataProvider.csproj">
+      <Project>{9e2b0cf5-3f34-4d8d-aac2-96ad5232bc65}</Project>
+      <Name>Socrat.DataProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Socrat.Lib\Socrat.Lib.csproj">
+      <Project>{c24f6695-a861-42fe-b5ae-5854ec349c71}</Project>
+      <Name>Socrat.Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Socrat.Log.Lib\Socrat.Log.Lib.csproj">
+      <Project>{0ce4c1bf-c229-4c0e-aeea-a2d28a4dc194}</Project>
+      <Name>Socrat.Log.Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Socrat.Log.Model\Socrat.Log.Model.csproj">
+      <Project>{0d1977c3-4eab-4b5e-82ec-52b21a9ff4be}</Project>
+      <Name>Socrat.Log.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Socrat.Module.Settings\Socrat.Module.Settings.csproj">
+      <Project>{B3C5BFC5-C40F-4450-8BD2-FBB16DFD482D}</Project>
+      <Name>Socrat.Module.Settings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Socrat.References\Socrat.References.csproj">
+      <Project>{1fb52a12-bfc0-4681-b144-c75092c1856b}</Project>
+      <Name>Socrat.References</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Socrat.Shape\Socrat.Shape.csproj">
+      <Project>{64b6fd44-5828-44f9-b91f-eeb7dff183ca}</Project>
+      <Name>Socrat.Shape</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Socrat.UI.Core\Socrat.UI.Core.csproj">
+      <Project>{fe5c0691-6941-457e-a6ed-1bd15bc25aec}</Project>
+      <Name>Socrat.UI.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FxRowFormulaEdit.resx">
+      <DependentUpon>FxRowFormulaEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FxFormulas.resx">
+      <DependentUpon>FxFormulas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FxFormulaStrEdit.resx">
+      <DependentUpon>FxFormulaStrEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FxOrderEdit.resx">
+      <DependentUpon>FxOrderEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FxOrderResource.resx">
+      <DependentUpon>FxOrderResource.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FxOrders.resx">
+      <DependentUpon>FxOrders.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FxOrdersFilter.resx">
+      <DependentUpon>FxOrdersFilter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\apply_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clearfilter_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forward_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forward_16x16.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

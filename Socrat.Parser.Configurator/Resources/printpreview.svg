@@ -1,0 +1,14 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<svg x="0px" y="0px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="Layer_1">
+  <g id="Printview">
+    <path d="M18,14c0-3.3,2.7-6,6-6V2H2v26h22v-8C20.7,20,18,17.3,18,14z" fill="#727272" class="Black" />
+    <path d="M18,14c0-2.6,1.7-4.8,4-5.7V4H4v22h18v-6.3C19.7,18.8,18,16.6,18,14z" fill="#FFFFFF" class="White" />
+    <path d="M20,20L8,32l-2-2l12-12C18,18,20.2,20,20,20z" fill="#727272" class="Black" />
+    <path d="M24,6c-4.4,0-8,3.6-8,8s3.6,8,8,8s8-3.6,8-8S28.4,6,24,6z M24,20c-3.3,0-6-2.7-6-6s2.7-6,6-6s6,2.7,6,6   S27.3,20,24,20z" fill="#1177D7" class="Blue" />
+    <g opacity="0.35" class="st0">
+      <path d="M26,8.3C25.4,8.1,24.7,8,24,8c-3.3,0-6,2.7-6,6s2.7,6,6,6c0.7,0,1.4-0.1,2-0.3V8.3z" fill="#727272" opacity="0.35" class="Black" />
+      <path d="M18,14c0,3.3,2.7,6,6,6V8C20.7,8,18,10.7,18,14z" fill="#FFFFFF" opacity="0.35" class="White" />
+    </g>
+  </g>
+  <g id="Layer_2" />
+</svg>

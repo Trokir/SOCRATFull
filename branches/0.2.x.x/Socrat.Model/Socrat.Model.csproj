@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{158D13B7-5097-4FE1-B750-2C73CC48E33B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Socrat.Model</RootNamespace>
+    <AssemblyName>Socrat.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\OUT\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\OUT\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\OUT\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\OUT\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Address\Address.cs" />
+    <Compile Include="Address\AddressContact.cs" />
+    <Compile Include="Address\AddressElement.cs" />
+    <Compile Include="Address\AddressElementType.cs" />
+    <Compile Include="Address\AddressElementTypeEnum.cs" />
+    <Compile Include="Address\AddressItem.cs" />
+    <Compile Include="Bank\Account.cs" />
+    <Compile Include="Bank\Bank.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Contacts\Contact.cs" />
+    <Compile Include="Contacts\ContactType.cs" />
+    <Compile Include="Contract\ContractAddress.cs" />
+    <Compile Include="Contract\ContractPrice.cs" />
+    <Compile Include="Contract\ContractTenderFormula.cs" />
+    <Compile Include="Contacts\CoworkerContact.cs" />
+    <Compile Include="Contract\Contract.cs" />
+    <Compile Include="Contract\ContractShippingSquare.cs" />
+    <Compile Include="Contract\ContractType.cs" />
+    <Compile Include="Contract\ContractTypeEnum.cs" />
+    <Compile Include="Convertion\BaseConverter.cs" />
+    <Compile Include="Country.cs" />
+    <Compile Include="Currency.cs" />
+    <Compile Include="Customer\CustomerAddress.cs" />
+    <Compile Include="Customer\CustomerProp.cs" />
+    <Compile Include="Customer\CustomerPropType.cs" />
+    <Compile Include="Customer\CustomerType.cs" />
+    <Compile Include="Customer\OPF.cs" />
+    <Compile Include="DateTime\DateTimeRange.cs" />
+    <Compile Include="Division\DepartmentType.cs" />
+    <Compile Include="Division\Division.cs" />
+    <Compile Include="Division\DivisionCustomer.cs" />
+    <Compile Include="Division\DivisionSignature.cs" />
+    <Compile Include="Document\DivisionContact.cs" />
+    <Compile Include="Document\DocumentSignature.cs" />
+    <Compile Include="Document\DocumentSignatureType.cs" />
+    <Compile Include="Document\DocumentType.cs" />
+    <Compile Include="Enums\ContactTypes.cs" />
+    <Compile Include="Materials\Brand.cs" />
+    <Compile Include="Materials\MarialEnum.cs" />
+    <Compile Include="Materials\MaterialColor.cs" />
+    <Compile Include="Materials\MaterialMarkType.cs" />
+    <Compile Include="Materials\MaterialSizeType.cs" />
+    <Compile Include="Materials\MaterialNom.cs" />
+    <Compile Include="Materials\MaterialType.cs" />
+    <Compile Include="Materials\Material.cs" />
+    <Compile Include="Materials\Measure.cs" />
+    <Compile Include="Materials\Processing.cs" />
+    <Compile Include="Materials\TradeMark.cs" />
+    <Compile Include="Materials\Vendor.cs" />
+    <Compile Include="Materials\VendorMaterialNom.cs" />
+    <Compile Include="Materials\VendorMaterial.cs" />
+    <Compile Include="Order\Formula.cs" />
+    <Compile Include="Order\FormulaItem.cs" />
+    <Compile Include="Order\FormulaItemFrameProperty.cs" />
+    <Compile Include="Order\FormulaItemGlassProperty.cs" />
+    <Compile Include="Order\FormulaItemTriplexProperty.cs" />
+    <Compile Include="Order\Order.cs" />
+    <Compile Include="Order\OrdersFilterNumberType.cs" />
+    <Compile Include="Order\OrdersFilter.cs" />
+    <Compile Include="Order\OrderRow.cs" />
+    <Compile Include="Order\OrderRowSloz.cs" />
+    <Compile Include="Order\OrdersFilterDateType.cs" />
+    <Compile Include="Order\PaymentTypeEnum.cs" />
+    <Compile Include="Order\SlozType.cs" />
+    <Compile Include="Order\PaymentType.cs" />
+    <Compile Include="Params\AppParam.cs" />
+    <Compile Include="Params\ParamAlias.cs" />
+    <Compile Include="Person\Coworker.cs" />
+    <Compile Include="Person\CoworkerPosition.cs" />
+    <Compile Include="Person\WorkPosition.cs" />
+    <Compile Include="Price\Price.cs" />
+    <Compile Include="Price\PriceType.cs" />
+    <Compile Include="PropertyChangedBase.cs" />
+    <Compile Include="Customer\Customer.cs" />
+    <Compile Include="Entity.cs" />
+    <Compile Include="Person\Gender.cs" />
+    <Compile Include="Person\Person.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shapes\CustomPoint.cs" />
+    <Compile Include="Shapes\Shape.cs" />
+    <Compile Include="Users\MenuTree.cs" />
+    <Compile Include="Users\Module.cs" />
+    <Compile Include="Users\Role.cs" />
+    <Compile Include="Users\RoleTreeItem.cs" />
+    <Compile Include="Users\TreeItem.cs" />
+    <Compile Include="Users\TreeItemType.cs" />
+    <Compile Include="Users\TreeItemTypeEnum.cs" />
+    <Compile Include="Users\User.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Socrat.Lib\Socrat.Lib.csproj">
+      <Project>{c24f6695-a861-42fe-b5ae-5854ec349c71}</Project>
+      <Name>Socrat.Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Socrat.Log.Lib\Socrat.Log.Lib.csproj">
+      <Project>{0ce4c1bf-c229-4c0e-aeea-a2d28a4dc194}</Project>
+      <Name>Socrat.Log.Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Socrat.Log.Model\Socrat.Log.Model.csproj">
+      <Project>{0d1977c3-4eab-4b5e-82ec-52b21a9ff4be}</Project>
+      <Name>Socrat.Log.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

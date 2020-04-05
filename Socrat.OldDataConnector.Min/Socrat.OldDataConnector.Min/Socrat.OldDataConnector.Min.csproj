@@ -1,0 +1,586 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{083C8DD4-17B9-4B28-B622-A29CAD6A42A5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Socrat.OldDataConnector.Min</RootNamespace>
+    <AssemblyName>Socrat.OldDataConnector.Min</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\OUT\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\OUT\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MinCode\AVTO.cs" />
+    <Compile Include="MinCode\AVTO.Designer.cs">
+      <DependentUpon>AVTO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\BARCODE.cs" />
+    <Compile Include="MinCode\BARCODE.Designer.cs">
+      <DependentUpon>BARCODE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\BRAKBORN.cs" />
+    <Compile Include="MinCode\BRAKBORN.Designer.cs">
+      <DependentUpon>BRAKBORN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\BRAKLOCATION.cs" />
+    <Compile Include="MinCode\BRAKLOCATION.Designer.cs">
+      <DependentUpon>BRAKLOCATION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\BRAKOSN.cs" />
+    <Compile Include="MinCode\BRAKOSN.Designer.cs">
+      <DependentUpon>BRAKOSN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\BRAK_LIST.cs" />
+    <Compile Include="MinCode\BRAK_LIST.Designer.cs">
+      <DependentUpon>BRAK_LIST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\COLORZAL.cs" />
+    <Compile Include="MinCode\COLORZAL.Designer.cs">
+      <DependentUpon>COLORZAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\ConnectionHelper.cs" />
+    <Compile Include="MinCode\CUST.cs" />
+    <Compile Include="MinCode\CUST.Designer.cs">
+      <DependentUpon>CUST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\CUSTOMER.cs" />
+    <Compile Include="MinCode\CUSTOMER.Designer.cs">
+      <DependentUpon>CUSTOMER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\CUSTOMER_ADDRESS.cs" />
+    <Compile Include="MinCode\CUSTOMER_ADDRESS.Designer.cs">
+      <DependentUpon>CUSTOMER_ADDRESS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\CUSTOMER_CONTACTS.cs" />
+    <Compile Include="MinCode\CUSTOMER_CONTACTS.Designer.cs">
+      <DependentUpon>CUSTOMER_CONTACTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\CUSTOMER_EVENTS_PERIODS.cs" />
+    <Compile Include="MinCode\CUSTOMER_EVENTS_PERIODS.Designer.cs">
+      <DependentUpon>CUSTOMER_EVENTS_PERIODS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\CUSTOMER_MANAGER.cs" />
+    <Compile Include="MinCode\CUSTOMER_MANAGER.Designer.cs">
+      <DependentUpon>CUSTOMER_MANAGER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\CUSTOMER_MESSAGE_EVENTS.cs" />
+    <Compile Include="MinCode\CUSTOMER_MESSAGE_EVENTS.Designer.cs">
+      <DependentUpon>CUSTOMER_MESSAGE_EVENTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\CUSTOMER_PRICE.cs" />
+    <Compile Include="MinCode\CUSTOMER_PRICE.Designer.cs">
+      <DependentUpon>CUSTOMER_PRICE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\CUSTSTATUS.cs" />
+    <Compile Include="MinCode\CUSTSTATUS.Designer.cs">
+      <DependentUpon>CUSTSTATUS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\DOGOVOR.cs" />
+    <Compile Include="MinCode\DOGOVOR.Designer.cs">
+      <DependentUpon>DOGOVOR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\FIGURE.cs" />
+    <Compile Include="MinCode\FIGURE.Designer.cs">
+      <DependentUpon>FIGURE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\FIGURECOORD.cs" />
+    <Compile Include="MinCode\FIGURECOORD.Designer.cs">
+      <DependentUpon>FIGURECOORD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\FILMS.cs" />
+    <Compile Include="MinCode\FILMS.Designer.cs">
+      <DependentUpon>FILMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\FILMTYPE.cs" />
+    <Compile Include="MinCode\FILMTYPE.Designer.cs">
+      <DependentUpon>FILMTYPE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\FORM.cs" />
+    <Compile Include="MinCode\FORM.Designer.cs">
+      <DependentUpon>FORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\FORMCATALOG.cs" />
+    <Compile Include="MinCode\FORMCATALOG.Designer.cs">
+      <DependentUpon>FORMCATALOG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\FORMCHECK.cs" />
+    <Compile Include="MinCode\FORMCHECK.Designer.cs">
+      <DependentUpon>FORMCHECK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\FORMMEMBERSHIP.cs" />
+    <Compile Include="MinCode\FORMMEMBERSHIP.Designer.cs">
+      <DependentUpon>FORMMEMBERSHIP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\FORMPARAM.cs" />
+    <Compile Include="MinCode\FORMPARAM.Designer.cs">
+      <DependentUpon>FORMPARAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\FRAME_TYPE.cs" />
+    <Compile Include="MinCode\FRAME_TYPE.Designer.cs">
+      <DependentUpon>FRAME_TYPE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\GLASS.cs" />
+    <Compile Include="MinCode\GLASS.Designer.cs">
+      <DependentUpon>GLASS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\GLASSHPROC.cs" />
+    <Compile Include="MinCode\GLASSHPROC.Designer.cs">
+      <DependentUpon>GLASSHPROC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\GLASSNOM.cs" />
+    <Compile Include="MinCode\GLASSNOM.Designer.cs">
+      <DependentUpon>GLASSNOM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\GLASSPROCESSING.cs" />
+    <Compile Include="MinCode\GLASSPROCESSING.Designer.cs">
+      <DependentUpon>GLASSPROCESSING.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\GLASSPROCESSINGTYPE.cs" />
+    <Compile Include="MinCode\GLASSPROCESSINGTYPE.Designer.cs">
+      <DependentUpon>GLASSPROCESSINGTYPE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\GLASSTYPE.cs" />
+    <Compile Include="MinCode\GLASSTYPE.Designer.cs">
+      <DependentUpon>GLASSTYPE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\GLASS_STRUCTURE.cs" />
+    <Compile Include="MinCode\GLASS_STRUCTURE.Designer.cs">
+      <DependentUpon>GLASS_STRUCTURE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\GRNOM.cs" />
+    <Compile Include="MinCode\GRNOM.Designer.cs">
+      <DependentUpon>GRNOM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\INCUSTOMER.cs" />
+    <Compile Include="MinCode\INCUSTOMER.Designer.cs">
+      <DependentUpon>INCUSTOMER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\KURS.cs" />
+    <Compile Include="MinCode\KURS.Designer.cs">
+      <DependentUpon>KURS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\LIMIT.cs" />
+    <Compile Include="MinCode\LIMIT.Designer.cs">
+      <DependentUpon>LIMIT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\LINE.cs" />
+    <Compile Include="MinCode\LINE.Designer.cs">
+      <DependentUpon>LINE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\LONGTEXTZURNAL.cs" />
+    <Compile Include="MinCode\LONGTEXTZURNAL.Designer.cs">
+      <DependentUpon>LONGTEXTZURNAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\MESSAGES.cs" />
+    <Compile Include="MinCode\MESSAGES.Designer.cs">
+      <DependentUpon>MESSAGES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\MESSAGE_EVENT_TYPES.cs" />
+    <Compile Include="MinCode\MESSAGE_EVENT_TYPES.Designer.cs">
+      <DependentUpon>MESSAGE_EVENT_TYPES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\NOMS.cs" />
+    <Compile Include="MinCode\NOMS.Designer.cs">
+      <DependentUpon>NOMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\NORMSPIS.cs" />
+    <Compile Include="MinCode\NORMSPIS.Designer.cs">
+      <DependentUpon>NORMSPIS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\ONE.cs" />
+    <Compile Include="MinCode\ONE.Designer.cs">
+      <DependentUpon>ONE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\OPZS_REEXPORT.cs" />
+    <Compile Include="MinCode\OPZS_REEXPORT.Designer.cs">
+      <DependentUpon>OPZS_REEXPORT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\ORDER.cs" />
+    <Compile Include="MinCode\ORDER.Designer.cs">
+      <DependentUpon>ORDER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\ORDER_ROW.cs" />
+    <Compile Include="MinCode\ORDER_ROW.Designer.cs">
+      <DependentUpon>ORDER_ROW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\ORDER_ROWDETAIL.cs" />
+    <Compile Include="MinCode\ORDER_ROWDETAIL.Designer.cs">
+      <DependentUpon>ORDER_ROWDETAIL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\ORDER_SATUS.cs" />
+    <Compile Include="MinCode\ORDER_SATUS.Designer.cs">
+      <DependentUpon>ORDER_SATUS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\OTDEL.cs" />
+    <Compile Include="MinCode\OTDEL.Designer.cs">
+      <DependentUpon>OTDEL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\OUTCROPSIZE.cs" />
+    <Compile Include="MinCode\OUTCROPSIZE.Designer.cs">
+      <DependentUpon>OUTCROPSIZE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\OUTCROPTYPE.cs" />
+    <Compile Include="MinCode\OUTCROPTYPE.Designer.cs">
+      <DependentUpon>OUTCROPTYPE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PACKETS.cs" />
+    <Compile Include="MinCode\PACKETS.Designer.cs">
+      <DependentUpon>PACKETS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PARSER.cs" />
+    <Compile Include="MinCode\PARSER.Designer.cs">
+      <DependentUpon>PARSER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PARSER_CALCTYPE.cs" />
+    <Compile Include="MinCode\PARSER_CALCTYPE.Designer.cs">
+      <DependentUpon>PARSER_CALCTYPE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PARSER_FIELDS_HEAD.cs" />
+    <Compile Include="MinCode\PARSER_FIELDS_HEAD.Designer.cs">
+      <DependentUpon>PARSER_FIELDS_HEAD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PARSER_FIELDS_TABLE.cs" />
+    <Compile Include="MinCode\PARSER_FIELDS_TABLE.Designer.cs">
+      <DependentUpon>PARSER_FIELDS_TABLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PARSER_HEAD.cs" />
+    <Compile Include="MinCode\PARSER_HEAD.Designer.cs">
+      <DependentUpon>PARSER_HEAD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PARSER_HEAD_ADR.cs" />
+    <Compile Include="MinCode\PARSER_HEAD_ADR.Designer.cs">
+      <DependentUpon>PARSER_HEAD_ADR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PARSER_TABLE.cs" />
+    <Compile Include="MinCode\PARSER_TABLE.Designer.cs">
+      <DependentUpon>PARSER_TABLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PARSER_TABLE_ADR.cs" />
+    <Compile Include="MinCode\PARSER_TABLE_ADR.Designer.cs">
+      <DependentUpon>PARSER_TABLE_ADR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PASP.cs" />
+    <Compile Include="MinCode\PASP.Designer.cs">
+      <DependentUpon>PASP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PFCUST.cs" />
+    <Compile Include="MinCode\PFCUST.Designer.cs">
+      <DependentUpon>PFCUST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PLATFORM.cs" />
+    <Compile Include="MinCode\PLATFORM.Designer.cs">
+      <DependentUpon>PLATFORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\POOLS.cs" />
+    <Compile Include="MinCode\POOLS.Designer.cs">
+      <DependentUpon>POOLS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PPCUST.cs" />
+    <Compile Include="MinCode\PPCUST.Designer.cs">
+      <DependentUpon>PPCUST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PP_GRANT.cs" />
+    <Compile Include="MinCode\PP_GRANT.Designer.cs">
+      <DependentUpon>PP_GRANT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PP_ROLE.cs" />
+    <Compile Include="MinCode\PP_ROLE.Designer.cs">
+      <DependentUpon>PP_ROLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PP_ROLE_GRANTS.cs" />
+    <Compile Include="MinCode\PP_ROLE_GRANTS.Designer.cs">
+      <DependentUpon>PP_ROLE_GRANTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PP_USER_GRANTS.cs" />
+    <Compile Include="MinCode\PP_USER_GRANTS.Designer.cs">
+      <DependentUpon>PP_USER_GRANTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PP_USER_ROLE.cs" />
+    <Compile Include="MinCode\PP_USER_ROLE.Designer.cs">
+      <DependentUpon>PP_USER_ROLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PRICEFILM.cs" />
+    <Compile Include="MinCode\PRICEFILM.Designer.cs">
+      <DependentUpon>PRICEFILM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PRICEGLASS.cs" />
+    <Compile Include="MinCode\PRICEGLASS.Designer.cs">
+      <DependentUpon>PRICEGLASS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PRICES.cs" />
+    <Compile Include="MinCode\PRICES.Designer.cs">
+      <DependentUpon>PRICES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PRICESPROS.cs" />
+    <Compile Include="MinCode\PRICESPROS.Designer.cs">
+      <DependentUpon>PRICESPROS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PRICESTYPE.cs" />
+    <Compile Include="MinCode\PRICESTYPE.Designer.cs">
+      <DependentUpon>PRICESTYPE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PRICEZAL.cs" />
+    <Compile Include="MinCode\PRICEZAL.Designer.cs">
+      <DependentUpon>PRICEZAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PRICE_BASE.cs" />
+    <Compile Include="MinCode\PRICE_BASE.Designer.cs">
+      <DependentUpon>PRICE_BASE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PRICE_BFORMULA.cs" />
+    <Compile Include="MinCode\PRICE_BFORMULA.Designer.cs">
+      <DependentUpon>PRICE_BFORMULA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PRICE_CUTGLASS.cs" />
+    <Compile Include="MinCode\PRICE_CUTGLASS.Designer.cs">
+      <DependentUpon>PRICE_CUTGLASS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PRICE_FILM.cs" />
+    <Compile Include="MinCode\PRICE_FILM.Designer.cs">
+      <DependentUpon>PRICE_FILM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PRICE_FRAME.cs" />
+    <Compile Include="MinCode\PRICE_FRAME.Designer.cs">
+      <DependentUpon>PRICE_FRAME.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PRICE_FRAME_TYPE.cs" />
+    <Compile Include="MinCode\PRICE_FRAME_TYPE.Designer.cs">
+      <DependentUpon>PRICE_FRAME_TYPE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PRICE_MARGINS.cs" />
+    <Compile Include="MinCode\PRICE_MARGINS.Designer.cs">
+      <DependentUpon>PRICE_MARGINS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PRICE_RECALCTYPE.cs" />
+    <Compile Include="MinCode\PRICE_RECALCTYPE.Designer.cs">
+      <DependentUpon>PRICE_RECALCTYPE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PRICE_SLOZ.cs" />
+    <Compile Include="MinCode\PRICE_SLOZ.Designer.cs">
+      <DependentUpon>PRICE_SLOZ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PRICE_SPROS.cs" />
+    <Compile Include="MinCode\PRICE_SPROS.Designer.cs">
+      <DependentUpon>PRICE_SPROS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PRICE_SPROSCOMPONENT.cs" />
+    <Compile Include="MinCode\PRICE_SPROSCOMPONENT.Designer.cs">
+      <DependentUpon>PRICE_SPROSCOMPONENT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\PRICE_SQUARE.cs" />
+    <Compile Include="MinCode\PRICE_SQUARE.Designer.cs">
+      <DependentUpon>PRICE_SQUARE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\REF_XONE.cs" />
+    <Compile Include="MinCode\REF_XONE.Designer.cs">
+      <DependentUpon>REF_XONE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\REGDOC.cs" />
+    <Compile Include="MinCode\REGDOC.Designer.cs">
+      <DependentUpon>REGDOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\ROUTETYPE.cs" />
+    <Compile Include="MinCode\ROUTETYPE.Designer.cs">
+      <DependentUpon>ROUTETYPE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\ROWCUST.cs" />
+    <Compile Include="MinCode\ROWCUST.Designer.cs">
+      <DependentUpon>ROWCUST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\ROWCUSTFORMPARAM.cs" />
+    <Compile Include="MinCode\ROWCUSTFORMPARAM.Designer.cs">
+      <DependentUpon>ROWCUSTFORMPARAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\ROWCUSTPROCESS.cs" />
+    <Compile Include="MinCode\ROWCUSTPROCESS.Designer.cs">
+      <DependentUpon>ROWCUSTPROCESS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\ROWCUSTPROCESSPARAM.cs" />
+    <Compile Include="MinCode\ROWCUSTPROCESSPARAM.Designer.cs">
+      <DependentUpon>ROWCUSTPROCESSPARAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\ROWCUST_OPTID.cs" />
+    <Compile Include="MinCode\ROWCUST_OPTID.Designer.cs">
+      <DependentUpon>ROWCUST_OPTID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\ROWCUST_RESTORATION.cs" />
+    <Compile Include="MinCode\ROWCUST_RESTORATION.Designer.cs">
+      <DependentUpon>ROWCUST_RESTORATION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\ROWCUST_SLOZ.cs" />
+    <Compile Include="MinCode\ROWCUST_SLOZ.Designer.cs">
+      <DependentUpon>ROWCUST_SLOZ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\ROWREGDOC.cs" />
+    <Compile Include="MinCode\ROWREGDOC.Designer.cs">
+      <DependentUpon>ROWREGDOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\ROWTENDER.cs" />
+    <Compile Include="MinCode\ROWTENDER.Designer.cs">
+      <DependentUpon>ROWTENDER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\SLOZ_TYPE.cs" />
+    <Compile Include="MinCode\SLOZ_TYPE.Designer.cs">
+      <DependentUpon>SLOZ_TYPE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\SORTPIR.cs" />
+    <Compile Include="MinCode\SORTPIR.Designer.cs">
+      <DependentUpon>SORTPIR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\SPROS.cs" />
+    <Compile Include="MinCode\SPROS.Designer.cs">
+      <DependentUpon>SPROS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\SPROSCC.cs" />
+    <Compile Include="MinCode\SPROSCC.Designer.cs">
+      <DependentUpon>SPROSCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\SPROSCOMPONENT.cs" />
+    <Compile Include="MinCode\SPROSCOMPONENT.Designer.cs">
+      <DependentUpon>SPROSCOMPONENT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\SPROSCOMPONENTTYPE.cs" />
+    <Compile Include="MinCode\SPROSCOMPONENTTYPE.Designer.cs">
+      <DependentUpon>SPROSCOMPONENTTYPE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\TEAM.cs" />
+    <Compile Include="MinCode\TEAM.Designer.cs">
+      <DependentUpon>TEAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\TEMP_FORMUL.cs" />
+    <Compile Include="MinCode\TEMP_FORMUL.Designer.cs">
+      <DependentUpon>TEMP_FORMUL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\TENDERCUST.cs" />
+    <Compile Include="MinCode\TENDERCUST.Designer.cs">
+      <DependentUpon>TENDERCUST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\TENDERFORMULA.cs" />
+    <Compile Include="MinCode\TENDERFORMULA.Designer.cs">
+      <DependentUpon>TENDERFORMULA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\TENDEROWNER.cs" />
+    <Compile Include="MinCode\TENDEROWNER.Designer.cs">
+      <DependentUpon>TENDEROWNER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\TENDERS.cs" />
+    <Compile Include="MinCode\TENDERS.Designer.cs">
+      <DependentUpon>TENDERS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\TRIPLEX.cs" />
+    <Compile Include="MinCode\TRIPLEX.Designer.cs">
+      <DependentUpon>TRIPLEX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\TRIPLEX_FILMLAYER.cs" />
+    <Compile Include="MinCode\TRIPLEX_FILMLAYER.Designer.cs">
+      <DependentUpon>TRIPLEX_FILMLAYER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\TRIPLEX_GLASSLAYER.cs" />
+    <Compile Include="MinCode\TRIPLEX_GLASSLAYER.Designer.cs">
+      <DependentUpon>TRIPLEX_GLASSLAYER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\TYPE3GLASS.cs" />
+    <Compile Include="MinCode\TYPE3GLASS.Designer.cs">
+      <DependentUpon>TYPE3GLASS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\TYPEBRAK.cs" />
+    <Compile Include="MinCode\TYPEBRAK.Designer.cs">
+      <DependentUpon>TYPEBRAK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\TYPEDOC.cs" />
+    <Compile Include="MinCode\TYPEDOC.Designer.cs">
+      <DependentUpon>TYPEDOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\TYPEFORMULA.cs" />
+    <Compile Include="MinCode\TYPEFORMULA.Designer.cs">
+      <DependentUpon>TYPEFORMULA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\TYPEGLASS.cs" />
+    <Compile Include="MinCode\TYPEGLASS.Designer.cs">
+      <DependentUpon>TYPEGLASS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\TYPEOSN.cs" />
+    <Compile Include="MinCode\TYPEOSN.Designer.cs">
+      <DependentUpon>TYPEOSN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\TYPERAMKA.cs" />
+    <Compile Include="MinCode\TYPERAMKA.Designer.cs">
+      <DependentUpon>TYPERAMKA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\TYPES.cs" />
+    <Compile Include="MinCode\TYPES.Designer.cs">
+      <DependentUpon>TYPES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\TYPESPROS.cs" />
+    <Compile Include="MinCode\TYPESPROS.Designer.cs">
+      <DependentUpon>TYPESPROS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\TYPETEAM.cs" />
+    <Compile Include="MinCode\TYPETEAM.Designer.cs">
+      <DependentUpon>TYPETEAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\VARCONST.cs" />
+    <Compile Include="MinCode\VARCONST.Designer.cs">
+      <DependentUpon>VARCONST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\WORKOTD.cs" />
+    <Compile Include="MinCode\WORKOTD.Designer.cs">
+      <DependentUpon>WORKOTD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\WORKPROCESS.cs" />
+    <Compile Include="MinCode\WORKPROCESS.Designer.cs">
+      <DependentUpon>WORKPROCESS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\WORKTEAM.cs" />
+    <Compile Include="MinCode\WORKTEAM.Designer.cs">
+      <DependentUpon>WORKTEAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinCode\ZAKSTAMP.cs" />
+    <Compile Include="MinCode\ZAKSTAMP.Designer.cs">
+      <DependentUpon>ZAKSTAMP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Min.xpo" />
+    <None Include="Min.xpo.diagram">
+      <DependentUpon>Min.xpo</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

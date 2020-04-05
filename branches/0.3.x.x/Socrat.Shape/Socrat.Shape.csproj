@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{64B6FD44-5828-44F9-B91F-EEB7DFF183CA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Socrat.Shape</RootNamespace>
+    <AssemblyName>Socrat.Shape</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\OUT\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\OUT\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Mvvm.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Charts.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraWizard.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\AdwansedFxShapeEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\BaseShape.cs" />
+    <Compile Include="Base\Line.cs" />
+    <Compile Include="Base\SelectingPoint.cs" />
+    <Compile Include="Base\ShapeValidation.cs" />
+    <Compile Include="Components\CxShapeCatalog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\CxShapeCatalog.Designer.cs">
+      <DependentUpon>CxShapeCatalog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\CxShapeEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\CxShapeEdit.Designer.cs">
+      <DependentUpon>CxShapeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\CxShapeOrderEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\CxShapeOrderEditor.Designer.cs">
+      <DependentUpon>CxShapeOrderEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\CxShprosBorder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\CxShprosBorder.Designer.cs">
+      <DependentUpon>CxShprosBorder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\CxShprosEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\CxShprosEditor.Designer.cs">
+      <DependentUpon>CxShprosEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\CxShprosElement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\CxShprosElement.Designer.cs">
+      <DependentUpon>CxShprosElement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factory\CurrentShape.cs" />
+    <Compile Include="Factory\CurrentUserShape.cs" />
+    <Compile Include="Factory\CustomInputShape.cs" />
+    <Compile Include="Factory\ShapeCurrentState.cs" />
+    <Compile Include="Forms\FxAddNewShape.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FxAddNewShape.Designer.cs">
+      <DependentUpon>FxAddNewShape.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FxAxis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FxAxis.Designer.cs">
+      <DependentUpon>FxAxis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FxElementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FxElementForm.Designer.cs">
+      <DependentUpon>FxElementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FxElementsPack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FxElementsPack.Designer.cs">
+      <DependentUpon>FxElementsPack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FxShapeCatalogEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FxShapeCatalogEditor.Designer.cs">
+      <DependentUpon>FxShapeCatalogEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FxShapeEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FxShapeEditor.Designer.cs">
+      <DependentUpon>FxShapeEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FxShprosEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FxShprosEditor.Designer.cs">
+      <DependentUpon>FxShprosEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Heptagons\Heptagon.cs" />
+    <Compile Include="Heptagons\Shape_23.cs" />
+    <Compile Include="Hexagons\Hexagon.cs" />
+    <Compile Include="Hexagons\Shape_10.cs" />
+    <Compile Include="Hexagons\Shape_22.cs" />
+    <Compile Include="Hexagons\Shape_42.cs" />
+    <Compile Include="Hexagons\Shape_9.cs" />
+    <Compile Include="Octagons\Octagon.cs" />
+    <Compile Include="Octagons\Shape_19.cs" />
+    <Compile Include="Octagons\Shape_24.cs" />
+    <Compile Include="Octagons\Shape_48.cs" />
+    <Compile Include="Partials\HeptagonTooth.cs" />
+    <Compile Include="Partials\HexagonTooth.cs" />
+    <Compile Include="Partials\OctagonTooth.cs" />
+    <Compile Include="Partials\PentagonTooth.cs" />
+    <Compile Include="Partials\RectangularTooth.cs" />
+    <Compile Include="Partials\TriangleTooth.cs" />
+    <Compile Include="Pentagons\Pentagon.cs" />
+    <Compile Include="Pentagons\Shape_21.cs" />
+    <Compile Include="Pentagons\Shape_3.cs" />
+    <Compile Include="Pentagons\Shape_4.cs" />
+    <Compile Include="Pentagons\Shape_40.cs" />
+    <Compile Include="Pentagons\Shape_41.cs" />
+    <Compile Include="Pentagons\Shape_7.cs" />
+    <Compile Include="Pentagons\Shape_8.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Rectangles\RectangleForShow.cs" />
+    <Compile Include="Rectangles\Rectangular.cs" />
+    <Compile Include="Rectangles\Shape_1.cs" />
+    <Compile Include="Rectangles\Shape_11.cs" />
+    <Compile Include="Rectangles\Shape_12.cs" />
+    <Compile Include="Rectangles\Shape_13.cs" />
+    <Compile Include="Rectangles\Shape_14.cs" />
+    <Compile Include="Rectangles\Shape_15.cs" />
+    <Compile Include="Rectangles\Shape_16.cs" />
+    <Compile Include="Rectangles\Shape_17.cs" />
+    <Compile Include="Rectangles\Shape_18.cs" />
+    <Compile Include="Rectangles\Shape_2.cs" />
+    <Compile Include="Rectangles\Shape_25.cs" />
+    <Compile Include="Rectangles\Shape_26.cs" />
+    <Compile Include="Rectangles\Shape_27.cs" />
+    <Compile Include="Rectangles\Shape_28.cs" />
+    <Compile Include="Rectangles\Shape_29.cs" />
+    <Compile Include="Rectangles\Shape_30.cs" />
+    <Compile Include="Rectangles\Shape_31.cs" />
+    <Compile Include="Rectangles\Shape_32.cs" />
+    <Compile Include="Rectangles\Shape_33.cs" />
+    <Compile Include="Rectangles\Shape_34.cs" />
+    <Compile Include="Rectangles\Shape_35.cs" />
+    <Compile Include="Rectangles\Shape_36.cs" />
+    <Compile Include="Rectangles\Shape_37.cs" />
+    <Compile Include="Rectangles\Shape_38.cs" />
+    <Compile Include="Rectangles\Shape_45.cs" />
+    <Compile Include="Rectangles\Shape_46.cs" />
+    <Compile Include="Rectangles\Shape_47.cs" />
+    <Compile Include="Rectangles\Shape_49.cs" />
+    <Compile Include="Rectangles\Shape_5.cs" />
+    <Compile Include="Rectangles\Shape_50.cs" />
+    <Compile Include="Rectangles\Shape_51.cs" />
+    <Compile Include="Rectangles\Shape_52.cs" />
+    <Compile Include="Rectangles\Shape_53.cs" />
+    <Compile Include="Rectangles\Shape_54.cs" />
+    <Compile Include="Rectangles\Shape_55.cs" />
+    <Compile Include="Rectangles\Shape_56.cs" />
+    <Compile Include="Rectangles\Shape_57.cs" />
+    <Compile Include="Rectangles\Shape_58.cs" />
+    <Compile Include="Rectangles\Shape_6.cs" />
+    <Compile Include="Rectangles\Shape_default.cs" />
+    <Compile Include="ShapeModuleStarter.cs" />
+    <Compile Include="Shproses\Shpros.cs" />
+    <Compile Include="Triangles\Shape_20.cs" />
+    <Compile Include="Triangles\Shape_43.cs" />
+    <Compile Include="Triangles\Shape_44.cs" />
+    <Compile Include="Triangles\Shape_59.cs" />
+    <Compile Include="Triangles\Shape_60.cs" />
+    <Compile Include="Triangles\Shape_61.cs" />
+    <Compile Include="Triangles\Shape_62.cs" />
+    <Compile Include="Triangles\Triangle.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Components\CxShapeCatalog.resx">
+      <DependentUpon>CxShapeCatalog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\CxShapeEdit.resx">
+      <DependentUpon>CxShapeEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\CxShapeOrderEditor.resx">
+      <DependentUpon>CxShapeOrderEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\CxShprosBorder.resx">
+      <DependentUpon>CxShprosBorder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\CxShprosEditor.resx">
+      <DependentUpon>CxShprosEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\CxShprosElement.resx">
+      <DependentUpon>CxShprosElement.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FxAddNewShape.resx">
+      <DependentUpon>FxAddNewShape.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FxAxis.resx">
+      <DependentUpon>FxAxis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FxElementForm.resx">
+      <DependentUpon>FxElementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FxElementsPack.resx">
+      <DependentUpon>FxElementsPack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FxShapeCatalogEditor.resx">
+      <DependentUpon>FxShapeCatalogEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FxShapeEditor.resx">
+      <DependentUpon>FxShapeEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FxShprosEditor.resx">
+      <DependentUpon>FxShprosEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Socrat.Core\Socrat.Core.csproj">
+      <Project>{de07c69d-3dd8-43f9-9571-aa2e3873dd56}</Project>
+      <Name>Socrat.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Socrat.DataProvider\Socrat.DataProvider.csproj">
+      <Project>{9e2b0cf5-3f34-4d8d-aac2-96ad5232bc65}</Project>
+      <Name>Socrat.DataProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Socrat.Lib\Socrat.Lib.csproj">
+      <Project>{c24f6695-a861-42fe-b5ae-5854ec349c71}</Project>
+      <Name>Socrat.Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Socrat.Log.Lib\Socrat.Log.Lib.csproj">
+      <Project>{0CE4C1BF-C229-4C0E-AEEA-A2D28A4DC194}</Project>
+      <Name>Socrat.Log.Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Socrat.References\Socrat.References.csproj">
+      <Project>{1fb52a12-bfc0-4681-b144-c75092c1856b}</Project>
+      <Name>Socrat.References</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Socrat.UI.Core\Socrat.UI.Core.csproj">
+      <Project>{fe5c0691-6941-457e-a6ed-1bd15bc25aec}</Project>
+      <Name>Socrat.UI.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\BaseFigure.datasource" />
+    <None Include="Properties\DataSources\FxShapeEditor.datasource" />
+    <None Include="Properties\DataSources\Triangle.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\1.gif" />
+    <Content Include="Images\10.gif" />
+    <Content Include="Images\11.gif" />
+    <Content Include="Images\12.gif" />
+    <Content Include="Images\13.gif" />
+    <Content Include="Images\14.gif" />
+    <Content Include="Images\15.gif" />
+    <Content Include="Images\16.gif" />
+    <Content Include="Images\17.gif" />
+    <Content Include="Images\18.gif" />
+    <Content Include="Images\19.gif" />
+    <Content Include="Images\2.gif" />
+    <Content Include="Images\20.gif" />
+    <Content Include="Images\21.gif" />
+    <Content Include="Images\22.gif" />
+    <Content Include="Images\23.gif" />
+    <Content Include="Images\24.gif" />
+    <Content Include="Images\25.gif" />
+    <Content Include="Images\26.gif" />
+    <Content Include="Images\27.gif" />
+    <Content Include="Images\28.gif" />
+    <Content Include="Images\29.gif" />
+    <Content Include="Images\3.gif" />
+    <Content Include="Images\30.gif" />
+    <Content Include="Images\31.gif" />
+    <Content Include="Images\32.gif" />
+    <Content Include="Images\33.gif" />
+    <Content Include="Images\34.gif" />
+    <Content Include="Images\35.gif" />
+    <Content Include="Images\36.gif" />
+    <Content Include="Images\37.gif" />
+    <Content Include="Images\38.gif" />
+    <Content Include="Images\4.gif" />
+    <Content Include="Images\40.gif" />
+    <Content Include="Images\41.gif" />
+    <Content Include="Images\42.gif" />
+    <Content Include="Images\43.gif" />
+    <Content Include="Images\44.gif" />
+    <Content Include="Images\45.gif" />
+    <Content Include="Images\46.gif" />
+    <Content Include="Images\47.gif" />
+    <Content Include="Images\48.gif" />
+    <Content Include="Images\49.gif" />
+    <Content Include="Images\5.gif" />
+    <Content Include="Images\50.gif" />
+    <Content Include="Images\51.gif" />
+    <Content Include="Images\52.gif" />
+    <Content Include="Images\53.gif" />
+    <Content Include="Images\54.gif" />
+    <Content Include="Images\55.gif" />
+    <Content Include="Images\56.gif" />
+    <Content Include="Images\57.gif" />
+    <Content Include="Images\58.gif" />
+    <Content Include="Images\59.gif" />
+    <Content Include="Images\6.gif" />
+    <Content Include="Images\60.gif" />
+    <Content Include="Images\61.gif" />
+    <Content Include="Images\62.gif" />
+    <Content Include="Images\7.gif" />
+    <Content Include="Images\8.gif" />
+    <Content Include="Images\9.gif" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

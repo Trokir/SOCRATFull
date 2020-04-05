@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DE07C69D-3DD8-43F9-9571-AA2E3873DD56}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Socrat.Core</RootNamespace>
+    <AssemblyName>Socrat.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Added\ActualDateType.cs" />
+    <Compile Include="Added\AddressElementTypeEnum.cs" />
+    <Compile Include="Added\Constants.cs" />
+    <Compile Include="Added\ContactTypes.cs" />
+    <Compile Include="Added\ContractTypeEnum.cs" />
+    <Compile Include="Added\FormulaItemProcessingBuilder.cs" />
+    <Compile Include="Added\FormulaItemProcessingEnum.cs" />
+    <Compile Include="Added\FrameItemTags.cs" />
+    <Compile Include="Added\SlozEnum.cs" />
+    <Compile Include="BL\PriceCalculation.cs" />
+    <Compile Include="BL\PriceLists\Abstract\IPriceInfo.cs" />
+    <Compile Include="BL\PriceLists\Abstract\IPriceService.cs" />
+    <Compile Include="BL\PriceLists\Concrete\PriceInfo.cs" />
+    <Compile Include="BL\PriceLists\Concrete\PriceService.cs" />
+    <Compile Include="DI\CompositionRoot.cs" />
+    <Compile Include="Entities\EdgeProcessing.cs" />
+    <Compile Include="Entities\FilmItem.cs" />
+    <Compile Include="Entities\FrameItem.cs" />
+    <Compile Include="Entities\GasItem.cs" />
+    <Compile Include="Entities\GlassItem.cs" />
+    <Compile Include="Entities\InsetItem.cs" />
+    <Compile Include="Added\MenuTree.cs" />
+    <Compile Include="Added\OrdersFilter.cs" />
+    <Compile Include="Added\OrdersFilterNumberType.cs" />
+    <Compile Include="Added\OrderStatusChangeMap.cs" />
+    <Compile Include="Added\OrdesFilterDateType.cs" />
+    <Compile Include="Added\ParamAlias.cs" />
+    <Compile Include="Added\PaymentTypeEnum.cs" />
+    <Compile Include="Added\Person.cs" />
+    <Compile Include="Added\TreeItemTypeEnum.cs" />
+    <Compile Include="Entities\PriceSlozsCollection.cs" />
+    <Compile Include="Entities\PriceSquRatioCollection.cs" />
+    <Compile Include="Entities\ProcessingComponent.cs" />
+    <Compile Include="Entities\SideProcessing.cs" />
+    <Compile Include="Entities\TriplexFilmItem.cs" />
+    <Compile Include="BaseRepository.cs" />
+    <Compile Include="Entities\Account.cs" />
+    <Compile Include="Entities\Address.cs" />
+    <Compile Include="Entities\AddressContact.cs" />
+    <Compile Include="Entities\AddressElement.cs" />
+    <Compile Include="Entities\AddressElementType.cs" />
+    <Compile Include="Entities\AddressItem.cs" />
+    <Compile Include="Entities\AppParam.cs" />
+    <Compile Include="Entities\Bank.cs" />
+    <Compile Include="Entities\Brand.cs" />
+    <Compile Include="Entities\ContactType.cs" />
+    <Compile Include="Entities\Contract.cs" />
+    <Compile Include="Entities\ContractAddress.cs" />
+    <Compile Include="Entities\ContractPrice.cs" />
+    <Compile Include="Entities\ContractShippingSquare.cs" />
+    <Compile Include="Entities\ContractTenderFormula.cs" />
+    <Compile Include="Entities\ContractType.cs" />
+    <Compile Include="Entities\Country.cs" />
+    <Compile Include="Entities\Coworker.cs" />
+    <Compile Include="Entities\CoworkerContact.cs" />
+    <Compile Include="Entities\CoworkerPosition.cs" />
+    <Compile Include="Entities\Currency.cs" />
+    <Compile Include="Entities\Customer.cs" />
+    <Compile Include="Entities\CustomerAddress.cs" />
+    <Compile Include="Entities\CustomerContact.cs" />
+    <Compile Include="Entities\CustomerProp.cs" />
+    <Compile Include="Entities\CustomerPropType.cs" />
+    <Compile Include="Entities\CustomerType.cs" />
+    <Compile Include="Entities\CustomPoint.cs" />
+    <Compile Include="Entities\DateTimeRange.cs" />
+    <Compile Include="Entities\DepartmentType.cs" />
+    <Compile Include="Entities\Division.cs" />
+    <Compile Include="Entities\DivisionContact.cs" />
+    <Compile Include="Entities\DivisionCustomer.cs" />
+    <Compile Include="Entities\DivisionSignature.cs" />
+    <Compile Include="Entities\DocumentSignature.cs" />
+    <Compile Include="Entities\DocumentSignatureType.cs" />
+    <Compile Include="Entities\DocumentType.cs" />
+    <Compile Include="Entities\Field.cs" />
+    <Compile Include="Entities\FieldValue.cs" />
+    <Compile Include="Entities\FormType.cs" />
+    <Compile Include="Entities\Formula.cs" />
+    <Compile Include="Entities\FormulaItem.cs" />
+    <Compile Include="Entities\FormulaItemProcessing.cs" />
+    <Compile Include="Entities\FrameItemProperty.cs" />
+    <Compile Include="Entities\GlassItemProperty.cs" />
+    <Compile Include="Entities\InsetItemProperty.cs" />
+    <Compile Include="Entities\ProcessingType.cs" />
+    <Compile Include="Entities\ShprosCircuit.cs" />
+    <Compile Include="Entities\ShprosElement.cs" />
+    <Compile Include="Entities\TriplexItemProperty.cs" />
+    <Compile Include="Entities\Gender.cs" />
+    <Compile Include="Entities\InsetPosition.cs" />
+    <Compile Include="Entities\Log.cs" />
+    <Compile Include="Entities\Material.cs" />
+    <Compile Include="Entities\MaterialField.cs" />
+    <Compile Include="Entities\MaterialMarkType.cs" />
+    <Compile Include="Entities\MaterialNom.cs" />
+    <Compile Include="Entities\MaterialSizeType.cs" />
+    <Compile Include="Entities\MaterialSpecProperty.cs" />
+    <Compile Include="Entities\MaterialType.cs" />
+    <Compile Include="Entities\Measure.cs" />
+    <Compile Include="Entities\Module.cs" />
+    <Compile Include="Entities\Opf.cs" />
+    <Compile Include="Entities\Order.cs" />
+    <Compile Include="Entities\OrderRow.cs" />
+    <Compile Include="Entities\OrderRowSloz.cs" />
+    <Compile Include="Entities\OrderStatus.cs" />
+    <Compile Include="Entities\OrderStatusHistory.cs" />
+    <Compile Include="Entities\PaymentType.cs" />
+    <Compile Include="Entities\Price.cs" />
+    <Compile Include="Entities\PriceForm.cs" />
+    <Compile Include="Entities\PriceLog.cs" />
+    <Compile Include="Entities\PricePeriod.cs" />
+    <Compile Include="Entities\PriceProcessing.cs" />
+    <Compile Include="Entities\PriceSelectType.cs" />
+    <Compile Include="Entities\PriceSloz.cs" />
+    <Compile Include="Entities\PriceSquRatio.cs" />
+    <Compile Include="Entities\PriceTagType.cs" />
+    <Compile Include="Entities\PriceType.cs" />
+    <Compile Include="Entities\PriceTypeMarkType.cs" />
+    <Compile Include="Entities\PriceValue.cs" />
+    <Compile Include="Entities\Processing.cs" />
+    <Compile Include="Entities\Role.cs" />
+    <Compile Include="Entities\RoleTreeItem.cs" />
+    <Compile Include="Entities\Shape.cs" />
+    <Compile Include="Entities\ShapeModifedParam.cs" />
+    <Compile Include="Entities\ShapeParam.cs" />
+    <Compile Include="Entities\ShapePoint.cs" />
+    <Compile Include="Entities\SlozType.cs" />
+    <Compile Include="Entities\SurfaseProcessing.cs" />
+    <Compile Include="Entities\TimeRange.cs" />
+    <Compile Include="Entities\TradeMark.cs" />
+    <Compile Include="Entities\TreeItem.cs" />
+    <Compile Include="Entities\TreeItemType.cs" />
+    <Compile Include="Entities\TriplexItem.cs" />
+    <Compile Include="Entities\UnitItem.cs" />
+    <Compile Include="Entities\UnitItemProperty.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\Vendor.cs" />
+    <Compile Include="Entities\VendorMaterial.cs" />
+    <Compile Include="Entities\VendorMaterialNom.cs" />
+    <Compile Include="Entities\WorkPosition.cs" />
+    <Compile Include="Entity.cs" />
+    <Compile Include="Helpers\EnumHelper.cs" />
+    <Compile Include="IBaseEntity.cs" />
+    <Compile Include="IDrawItem.cs" />
+    <Compile Include="IEntity.cs" />
+    <Compile Include="IEntityEditor.cs" />
+    <Compile Include="IEntitySelector.cs" />
+    <Compile Include="INamedEntity.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="IShortNamedEntity.cs" />
+    <Compile Include="ITabable.cs" />
+    <Compile Include="IValidable.cs" />
+    <Compile Include="MarialEnum.cs" />
+    <Compile Include="ParentItemAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyChangedBase.cs" />
+    <Compile Include="Repositories\Abstract\ISocratRepository.cs" />
+    <Compile Include="Repositories\Concrete\CommonSocratRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Socrat.DataBase</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{f558fe79-a9d9-45d7-8955-7f8f71801257}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Socrat.DataBase</RootNamespace>
+    <AssemblyName>Socrat.DataBase</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="dbo\Functions" />
+    <Folder Include="dbo\Tables" />
+    <Folder Include="dbo\Views" />
+    <Folder Include="Security\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Stored Procedures\P_LogList.sql" />
+    <Build Include="dbo\Stored Procedures\P_LogInternalInsert.sql" />
+    <Build Include="dbo\Stored Procedures\P_LogInsert.sql" />
+    <Build Include="dbo\Tables\Log.sql" />
+    <Build Include="dbo\Tables\Module.sql" />
+    <Build Include="dbo\Tables\Role.sql" />
+    <Build Include="dbo\Tables\RoleTreeItem.sql" />
+    <Build Include="dbo\Tables\TreeItem.sql" />
+    <Build Include="dbo\Tables\TreeItemType.sql" />
+    <Build Include="dbo\Tables\User.sql" />
+    <Build Include="dbo\Tables\Gender.sql" />
+    <Build Include="dbo\Tables\Customer.sql" />
+    <Build Include="dbo\Tables\Bank.sql" />
+    <Build Include="dbo\Tables\Account.sql" />
+    <Build Include="dbo\Tables\DateTimeRange.sql" />
+    <Build Include="dbo\Tables\CustomerType.sql" />
+    <Build Include="dbo\Tables\OPF.sql" />
+    <Build Include="dbo\Tables\ContactType.sql" />
+    <Build Include="dbo\Tables\Country.sql" />
+    <Build Include="dbo\Tables\Currency.sql" />
+    <Build Include="dbo\Tables\CustomerProp.sql" />
+    <Build Include="dbo\Tables\CustomerPropType.sql" />
+    <Build Include="dbo\Tables\Division.sql" />
+    <Build Include="dbo\Tables\DivisionCustomer.sql" />
+    <Build Include="dbo\Tables\DivisionContact.sql" />
+    <Build Include="dbo\Tables\Coworker.sql" />
+    <Build Include="dbo\Tables\CoworkerContract.sql" />
+    <Build Include="dbo\Tables\CoworkerPosition.sql" />
+    <Build Include="dbo\Tables\WorkPosition.sql" />
+    <Build Include="dbo\Tables\DivisionSignature.sql" />
+    <Build Include="dbo\Tables\DocumentType.sql" />
+    <Build Include="dbo\Tables\DocumentSignature.sql" />
+    <Build Include="dbo\Tables\DocumentSignatureType.sql" />
+    <Build Include="dbo\Tables\DepartmentType.sql" />
+    <Build Include="dbo\Tables\Order.sql" />
+    <Build Include="dbo\Tables\OrderRow.sql" />
+    <Build Include="dbo\Tables\PaymentType.sql" />
+    <Build Include="dbo\Tables\SlozType.sql" />
+    <Build Include="dbo\Tables\OrderRowSloz.sql" />
+    <Build Include="dbo\Tables\AppParams.sql" />
+    <Build Include="dbo\Tables\Contract.sql" />
+    <Build Include="dbo\Tables\ContractType.sql" />
+    <Build Include="dbo\Tables\PriceType.sql" />
+    <Build Include="dbo\Tables\ContractShippingSquare.sql" />
+    <Build Include="dbo\Tables\ContractTenderFormula.sql" />
+    <Build Include="dbo\Tables\ContractPrice.sql" />
+    <Build Include="dbo\Tables\Price.sql" />
+    <Build Include="dbo\Tables\PriceSloz.sql" />
+    <Build Include="dbo\Tables\Address.sql" />
+    <Build Include="dbo\Tables\AddressItem.sql" />
+    <Build Include="dbo\Tables\AddressElement.sql" />
+    <Build Include="dbo\Tables\AddressElementType.sql" />
+    <Build Include="dbo\Tables\ContractAddress.sql" />
+    <Build Include="dbo\Tables\Material.sql" />
+    <Build Include="dbo\Tables\MaterialType.sql" />
+    <Build Include="dbo\Tables\Brand.sql" />
+    <Build Include="dbo\Tables\Vendor.sql" />
+    <Build Include="dbo\Tables\VendorMaterial.sql" />
+    <Build Include="dbo\Tables\TradeMark.sql" />
+    <Build Include="dbo\Tables\Measure.sql" />
+    <Build Include="dbo\Tables\MaterialSpecProperty.sql" />
+    <Build Include="dbo\Tables\MaterialMarkType.sql" />
+    <Build Include="dbo\Tables\VendorMaterialNom.sql" />
+    <Build Include="dbo\Tables\CustomerAddress.sql" />
+    <Build Include="dbo\Tables\AddressContact.sql" />
+    <Build Include="dbo\Tables\MaterialSizeType.sql" />
+    <Build Include="dbo\Tables\MaterialNom.sql" />
+    <Build Include="dbo\Tables\Formula.sql" />
+    <Build Include="dbo\Tables\FormulaItem.sql" />
+    <Build Include="dbo\Tables\Shape.sql" />
+    <Build Include="dbo\Tables\ShapePoint.sql" />
+    <Build Include="dbo\Tables\OrderStatus.sql" />
+    <Build Include="dbo\Tables\OrderStatusHistory.sql" />
+    <Build Include="dbo\Tables\Field.sql" />
+    <Build Include="dbo\Tables\MaterialField.sql" />
+    <Build Include="dbo\Tables\FieldValue.sql" />
+    <Build Include="dbo\Tables\FormType.sql" />
+    <Build Include="dbo\Tables\PriceForm.sql" />
+    <Build Include="dbo\Tables\PriceSquRatio.sql" />
+    <Build Include="dbo\Tables\PriceTypeMarkType.sql" />
+    <Build Include="dbo\Tables\PricePeriod.sql" />
+    <Build Include="dbo\Tables\PriceProcessing.sql" />
+    <Build Include="dbo\Tables\PriceValue.sql" />
+    <Build Include="dbo\Tables\PriceLog.sql" />
+    <Build Include="dbo\Tables\PriceTagType.sql" />
+    <Build Include="dbo\Tables\PriceSelectType.sql" />
+    <Build Include="dbo\Tables\TimeRange.sql" />
+    <Build Include="dbo\Tables\CustomerContact.sql" />
+    <Build Include="dbo\Tables\InsetPosition.sql" />
+    <Build Include="dbo\Tables\ShapeParam.sql" />
+    <Build Include="dbo\Tables\ShapeModifedParam.sql" />
+    <Build Include="dbo\Tables\TriplexItemProperties.sql" />
+    <Build Include="dbo\Tables\GlassItemProperties.sql" />
+    <Build Include="dbo\Tables\FrameItemProperties.sql" />
+    <Build Include="dbo\Tables\InsetItemProperties.sql" />
+    <Build Include="dbo\Tables\ProcessingTypes.sql" />
+    <Build Include="dbo\Tables\Processings.sql" />
+    <Build Include="dbo\Tables\ShprosElements.sql" />
+    <Build Include="dbo\Tables\ShprosCircuits.sql" />
+    <Build Include="dbo\Tables\FormulaItemProcessing.sql" />
+    <Build Include="dbo\Tables\ProcessingComponent.sql" />
+    <Build Include="dbo\Tables\PriceFormula_1.sql" />
+    <Build Include="dbo\Tables\VendorMachineType.sql" />
+    <Build Include="dbo\Tables\VendorMachineNom.sql" />
+    <Build Include="dbo\Tables\MachineType.sql" />
+    <Build Include="dbo\Tables\MachineTypeProcessing.sql" />
+    <Build Include="dbo\Tables\VendorMachineOption.sql" />
+    <Build Include="dbo\Tables\VendorMachineProcessing.sql" />
+    <Build Include="dbo\Tables\ProcessingNom.sql" />
+    <Build Include="dbo\Tables\MachineNomOption.sql" />
+    <Build Include="dbo\Tables\MachineNom.sql" />
+    <Build Include="dbo\Tables\MachineGroup.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Socrat.DataBase.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="Socrat.DataBase.refactorlog" />
+  </ItemGroup>
+</Project>

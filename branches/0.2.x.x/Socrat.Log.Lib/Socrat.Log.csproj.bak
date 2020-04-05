@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0CE4C1BF-C229-4C0E-AEEA-A2D28A4DC194}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Socrat.Log</RootNamespace>
+    <AssemblyName>Socrat.Log</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\CxLogElementControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CxLogElementControl.Designer.cs">
+      <DependentUpon>CxLogElementControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CxLogList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CxLogList.Designer.cs">
+      <DependentUpon>CxLogList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Common.cs" />
+    <Compile Include="Core\SQLHelper.cs" />
+    <Compile Include="Core\LogSqlReader.cs" />
+    <Compile Include="Core\LogSqlWriter.cs" />
+    <Compile Include="Core\LogXmlReader.cs" />
+    <Compile Include="Core\LogXmlWriter.cs" />
+    <Compile Include="Enums\LogPlace.cs" />
+    <Compile Include="Enums\LogType.cs" />
+    <Compile Include="Forms\FxFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FxFilter.Designer.cs">
+      <DependentUpon>FxFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FxLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FxLog.Designer.cs">
+      <DependentUpon>FxLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FxMainLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FxMainLog.Designer.cs">
+      <DependentUpon>FxMainLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="infrastructure\IlogReader.cs" />
+    <Compile Include="infrastructure\ILogWriter.cs" />
+    <Compile Include="LogSys.cs" />
+    <Compile Include="Models\Filter.cs" />
+    <Compile Include="Models\LogElement.cs" />
+    <Compile Include="Models\LogList.cs" />
+    <Compile Include="Models\MyException.cs" />
+    <Compile Include="Models\TreeElement.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\CxLogElementControl.resx">
+      <DependentUpon>CxLogElementControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CxLogList.resx">
+      <DependentUpon>CxLogList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FxFilter.resx">
+      <DependentUpon>FxFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FxLog.resx">
+      <DependentUpon>FxLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FxMainLog.resx">
+      <DependentUpon>FxMainLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\Socrat.Log.Models.TreeElementList.datasource" />
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-view-filter-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Filter-List-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Upload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window_view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\61.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\71.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\81.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\91.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\101.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-view-filter-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Down1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Filter-List-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unload1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Up1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Upload1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window_view1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ru-ru.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\navigatedown32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\navigateup32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analysis32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goback32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gointo32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree32.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
